@@ -4,261 +4,24 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
   <requiredProperties>
+  	<requiredProperty key="utilityId"/>
   	<requiredProperty key="groupId"><defaultValue>none</defaultValue></requiredProperty>
-  	<requiredProperty key="artifactId"><defaultValue>pom</defaultValue></requiredProperty>
-  	
+  	<requiredProperty key="artifactId"><defaultValue>${utilityId}</defaultValue></requiredProperty>
   	<requiredProperty key="version"><defaultValue>0.0.1</defaultValue></requiredProperty>
-  	
-  	<requiredProperty key="systemId"/>
-  	<requiredProperty key="rootVersion"><defaultValue>0.0.1</defaultValue> </requiredProperty>
-  	<requiredProperty key="package"><defaultValue>org.cyk.system.${systemId}</defaultValue></requiredProperty>
+  	<requiredProperty key="package"><defaultValue>org.cyk.utility.${utilityId}</defaultValue></requiredProperty>
   	
   </requiredProperties>
 
 	<fileSets>
+
 		<fileSet filtered="true">
 			<directory></directory>
 			<includes>
 				<include>pom.xml</include>
 			</includes>
 		</fileSet>
-		<!-- model -->
-		
-		<fileSet filtered="true">
-			<directory>model</directory>
-			<includes>
-				<include>pom.xml</include>
-			</includes>
-		</fileSet>
 		<fileSet filtered="true" packaged="true">
-			<directory>model/src/main/java</directory>
-			<includes>
-				<include>**/*.java</include>
-			</includes>
-		</fileSet>
-		<fileSet filtered="true">
-			<directory>model/src/main/resources</directory>
-			<includes>
-				<include>**/*.*</include>
-			</includes>
-		</fileSet>
-		<fileSet filtered="true" packaged="true">
-			<directory>model/src/test/java</directory>
-			<includes>
-				<include>**/*.java</include>
-			</includes>
-		</fileSet>
-		<fileSet filtered="true">
-			<directory>model/src/test/resources</directory>
-			<includes>
-				<include>**/*.*</include>
-			</includes>
-		</fileSet>
-		<!-- dao-api -->
-		<fileSet filtered="true">
-			<directory>dao-api</directory>
-			<includes>
-				<include>pom.xml</include>
-			</includes>
-		</fileSet>
-		<fileSet filtered="true" packaged="true">
-			<directory>dao-api/src/main/java</directory>
-			<includes>
-				<include>**/*.java</include>
-			</includes>
-		</fileSet>
-		<fileSet filtered="true">
-			<directory>dao-api/src/main/resources</directory>
-			<includes>
-				<include>**/*.*</include>
-			</includes>
-		</fileSet>
-		<fileSet filtered="true" packaged="true">
-			<directory>dao-api/src/test/java</directory>
-			<includes>
-				<include>**/*.java</include>
-			</includes>
-		</fileSet>
-		<fileSet filtered="true">
-			<directory>dao-api/src/test/resources</directory>
-			<includes>
-				<include>**/*.*</include>
-			</includes>
-		</fileSet>
-		<!-- dao-impl -->
-		<fileSet filtered="true">
-			<directory>dao-impl-jpa</directory>
-			<includes>
-				<include>pom.xml</include>
-			</includes>
-		</fileSet>
-		<fileSet filtered="true" packaged="true">
-			<directory>dao-impl-jpa/src/main/java</directory>
-			<includes>
-				<include>**/*.java</include>
-			</includes>
-		</fileSet>
-		<fileSet filtered="true">
-			<directory>dao-impl-jpa/src/main/resources</directory>
-			<includes>
-				<include>**/*.*</include>
-			</includes>
-		</fileSet>
-		<fileSet filtered="true" packaged="true">
-			<directory>dao-impl-jpa/src/test/java</directory>
-			<includes>
-				<include>**/*.java</include>
-			</includes>
-		</fileSet>	
-		<fileSet filtered="true">
-			<directory>dao-impl-jpa/src/test/resources</directory>
-			<includes>
-				<include>**/*.*</include>
-			</includes>
-		</fileSet>	
-		<!-- service-api -->
-		<fileSet filtered="true">
-			<directory>service-api</directory>
-			<includes>
-				<include>pom.xml</include>
-			</includes>
-		</fileSet>
-		<fileSet filtered="true" packaged="true">
-			<directory>service-api/src/main/java</directory>
-			<includes>
-				<include>**/*.java</include>
-			</includes>
-		</fileSet>
-		<fileSet filtered="true">
-			<directory>service-api/src/main/resources</directory>
-			<includes>
-				<include>**/*.*</include>
-			</includes>
-		</fileSet>
-		<fileSet filtered="true" packaged="true">
-			<directory>service-api/src/test/java</directory>
-			<includes>
-				<include>**/*.java</include>
-			</includes>
-		</fileSet>
-		<fileSet filtered="true">
-			<directory>service-api/src/test/resources</directory>
-			<includes>
-				<include>**/*.*</include>
-			</includes>
-		</fileSet>
-		<!-- service-impl -->
-		<fileSet filtered="true">
-			<directory>service-impl-ejb</directory>
-			<includes>
-				<include>pom.xml</include>
-			</includes>
-		</fileSet>
-		<fileSet filtered="true" packaged="true">
-			<directory>service-impl-ejb/src/main/java</directory>
-			<includes>
-				<include>**/*.java</include>
-			</includes>
-		</fileSet>
-		<fileSet filtered="true">
-			<directory>service-impl-ejb/src/main/resources</directory>
-			<includes>
-				<include>**/*.*</include>
-			</includes>
-		</fileSet>
-		<fileSet filtered="true" packaged="true">
-			<directory>service-impl-ejb/src/test/java</directory>
-			<includes>
-				<include>**/*.java</include>
-			</includes>
-		</fileSet>	
-		<fileSet filtered="true">
-			<directory>service-impl-ejb/src/test/resources</directory>
-			<includes>
-				<include>**/*.*</include>
-			</includes>
-		</fileSet>	
-		<!-- ui-web -->
-		<fileSet filtered="true">
-			<directory>ui-web-primefaces</directory>
-			<includes>
-				<include>pom.xml</include>
-			</includes>
-		</fileSet>
-		<fileSet filtered="true" packaged="true">
-			<directory>ui-web-primefaces/src/main/java</directory>
-			<includes>
-				<include>**/*.java</include>
-			</includes>
-		</fileSet>
-		<fileSet filtered="true" packaged="true">
-			<directory>ui-web-primefaces/src/test/java</directory>
-			<includes>
-				<include>**/*.java</include>
-			</includes>
-		</fileSet>
-		<fileSet filtered="true">
-			<directory>ui-web-primefaces/src/test/resources</directory>
-			<includes>
-				<include>**/*.*</include>
-			</includes>
-		</fileSet>
-		<fileSet filtered="true">
-			<directory>ui-web-primefaces/src/main/web</directory>
-			<includes>
-				<include>**/*.*</include>
-			</includes>
-		</fileSet>		
-		<!-- application -->
-		<fileSet filtered="true">
-			<directory>application</directory>
-			<includes>
-				<include>pom.xml</include>
-			</includes>
-		</fileSet>
-		<!-- application-resources -->
-		<fileSet filtered="true">
-			<directory>application-resources</directory>
-			<includes>
-				<include>pom.xml</include>
-			</includes>
-		</fileSet>
-		<fileSet filtered="true" packaged="true">
-			<directory>application-resources/src/main/java</directory>
-			<includes>
-				<include>**/*.java</include>
-			</includes>
-		</fileSet>
-		<fileSet filtered="true">
-			<directory>application-resources/src/main/resources</directory>
-			<includes>
-				<include>**/*.*</include>
-			</includes>
-		</fileSet>
-		<fileSet filtered="true" packaged="true">
-			<directory>application-resources/src/test/java</directory>
-			<includes>
-				<include>**/*.java</include>
-			</includes>
-		</fileSet>	
-		<fileSet filtered="true">
-			<directory>application-resources/src/test/resources</directory>
-			<includes>
-				<include>**/*.*</include>
-			</includes>
-		</fileSet>				
-	</fileSets>  
-	
-	<!--modules>
-		<module id="model" name="model" dir="model">
-		<fileSet filtered="true">
-			<directory>mode</directory>
-			<includes>
-				<include>pom.xml</include>
-			</includes>
-		</fileSet>
-		<fileSet filtered="true" packaged="true">
-			<directory>/src/main/java</directory>
+			<directory>src/main/java</directory>
 			<includes>
 				<include>**/*.java</include>
 			</includes>
@@ -280,8 +43,8 @@
 			<includes>
 				<include>**/*.*</include>
 			</includes>
-		</fileSet>			
-		</module>
-	</modules-->
+		</fileSet>
+			
+	</fileSets>  
   
 </archetype-descriptor>

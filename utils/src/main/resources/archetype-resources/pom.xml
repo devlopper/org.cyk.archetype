@@ -9,11 +9,12 @@
 		<version>gp.0.0.1</version>
 	</parent>
 
-	<name>${utilityId} utilities</name>
+	<name>${utilityId} utility</name>
 	<url>http://www.cykcorp.org</url>
 	
-	<groupId>org.cyk.utils</groupId>
+	<groupId>org.cyk.utility</groupId>
 	<artifactId>${utilityId}</artifactId>
+	<version>0.0.1</version>
 	<packaging>jar</packaging>
 	
 </project>
