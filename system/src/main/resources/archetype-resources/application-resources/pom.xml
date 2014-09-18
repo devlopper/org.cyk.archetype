@@ -11,7 +11,7 @@
 
 	<name>Application Resources</name>
 
-	<artifactId>application-resources</artifactId>
+	<artifactId>${systemId}-application-resources</artifactId>
 	<packaging>jar</packaging>
 	
 </project>

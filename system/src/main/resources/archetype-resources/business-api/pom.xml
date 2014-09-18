@@ -9,16 +9,22 @@
 		<version>${version}</version>
 	</parent>
 
-	<name>Domain Model</name>
-
-	<artifactId>${systemId}-model</artifactId>
+	<name>Business API</name>
+	
+	<groupId>org.cyk.system.${systemId}.business</groupId>
+	<artifactId>${systemId}-business-api</artifactId>
 	<packaging>jar</packaging>
 	
 	<dependencies>
 		<dependency>
-			<groupId>org.cyk.system.root</groupId>
-			<artifactId>root-model</artifactId>
+			<groupId>org.cyk.system.root.business</groupId>
+			<artifactId>root-business-api</artifactId>
 			<version>${rootVersion}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.cyk.system.${systemId}</groupId>
+			<artifactId>${systemId}-model</artifactId>
+			<version>${version}</version>
 		</dependency>
 	</dependencies>	
 

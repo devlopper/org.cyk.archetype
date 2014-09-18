@@ -54,126 +54,126 @@
 				<include>**/*.*</include>
 			</includes>
 		</fileSet>
-		<!-- dao-api -->
+		<!-- persistence-api -->
 		<fileSet filtered="true">
-			<directory>dao-api</directory>
+			<directory>persistence-api</directory>
 			<includes>
 				<include>pom.xml</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true" packaged="true">
-			<directory>dao-api/src/main/java</directory>
+			<directory>persistence-api/src/main/java</directory>
 			<includes>
 				<include>**/*.java</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true">
-			<directory>dao-api/src/main/resources</directory>
+			<directory>persistence-api/src/main/resources</directory>
 			<includes>
 				<include>**/*.*</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true" packaged="true">
-			<directory>dao-api/src/test/java</directory>
+			<directory>persistence-api/src/test/java</directory>
 			<includes>
 				<include>**/*.java</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true">
-			<directory>dao-api/src/test/resources</directory>
+			<directory>persistence-api/src/test/resources</directory>
 			<includes>
 				<include>**/*.*</include>
 			</includes>
 		</fileSet>
-		<!-- dao-impl -->
+		<!-- persistence-impl -->
 		<fileSet filtered="true">
-			<directory>dao-impl-jpa</directory>
+			<directory>persistence-impl-jpa</directory>
 			<includes>
 				<include>pom.xml</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true" packaged="true">
-			<directory>dao-impl-jpa/src/main/java</directory>
+			<directory>persistence-impl-jpa/src/main/java</directory>
 			<includes>
 				<include>**/*.java</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true">
-			<directory>dao-impl-jpa/src/main/resources</directory>
+			<directory>persistence-impl-jpa/src/main/resources</directory>
 			<includes>
 				<include>**/*.*</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true" packaged="true">
-			<directory>dao-impl-jpa/src/test/java</directory>
+			<directory>persistence-impl-jpa/src/test/java</directory>
 			<includes>
 				<include>**/*.java</include>
 			</includes>
 		</fileSet>	
 		<fileSet filtered="true">
-			<directory>dao-impl-jpa/src/test/resources</directory>
+			<directory>persistence-impl-jpa/src/test/resources</directory>
 			<includes>
 				<include>**/*.*</include>
 			</includes>
 		</fileSet>	
-		<!-- service-api -->
+		<!-- business-api -->
 		<fileSet filtered="true">
-			<directory>service-api</directory>
+			<directory>business-api</directory>
 			<includes>
 				<include>pom.xml</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true" packaged="true">
-			<directory>service-api/src/main/java</directory>
+			<directory>business-api/src/main/java</directory>
 			<includes>
 				<include>**/*.java</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true">
-			<directory>service-api/src/main/resources</directory>
+			<directory>business-api/src/main/resources</directory>
 			<includes>
 				<include>**/*.*</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true" packaged="true">
-			<directory>service-api/src/test/java</directory>
+			<directory>business-api/src/test/java</directory>
 			<includes>
 				<include>**/*.java</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true">
-			<directory>service-api/src/test/resources</directory>
+			<directory>business-api/src/test/resources</directory>
 			<includes>
 				<include>**/*.*</include>
 			</includes>
 		</fileSet>
-		<!-- service-impl -->
+		<!-- business-impl -->
 		<fileSet filtered="true">
-			<directory>service-impl-ejb</directory>
+			<directory>business-impl-ejb</directory>
 			<includes>
 				<include>pom.xml</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true" packaged="true">
-			<directory>service-impl-ejb/src/main/java</directory>
+			<directory>business-impl-ejb/src/main/java</directory>
 			<includes>
 				<include>**/*.java</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true">
-			<directory>service-impl-ejb/src/main/resources</directory>
+			<directory>business-impl-ejb/src/main/resources</directory>
 			<includes>
 				<include>**/*.*</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true" packaged="true">
-			<directory>service-impl-ejb/src/test/java</directory>
+			<directory>business-impl-ejb/src/test/java</directory>
 			<includes>
 				<include>**/*.java</include>
 			</includes>
 		</fileSet>	
 		<fileSet filtered="true">
-			<directory>service-impl-ejb/src/test/resources</directory>
+			<directory>business-impl-ejb/src/test/resources</directory>
 			<includes>
 				<include>**/*.*</include>
 			</includes>
@@ -248,40 +248,5 @@
 			</includes>
 		</fileSet>				
 	</fileSets>  
-	
-	<!--modules>
-		<module id="model" name="model" dir="model">
-		<fileSet filtered="true">
-			<directory>mode</directory>
-			<includes>
-				<include>pom.xml</include>
-			</includes>
-		</fileSet>
-		<fileSet filtered="true" packaged="true">
-			<directory>/src/main/java</directory>
-			<includes>
-				<include>**/*.java</include>
-			</includes>
-		</fileSet>
-		<fileSet filtered="true">
-			<directory>src/main/resources</directory>
-			<includes>
-				<include>**/*.*</include>
-			</includes>
-		</fileSet>
-		<fileSet filtered="true" packaged="true">
-			<directory>src/test/java</directory>
-			<includes>
-				<include>**/*.java</include>
-			</includes>
-		</fileSet>
-		<fileSet filtered="true">
-			<directory>src/test/resources</directory>
-			<includes>
-				<include>**/*.*</include>
-			</includes>
-		</fileSet>			
-		</module>
-	</modules-->
-  
+	  
 </archetype-descriptor>

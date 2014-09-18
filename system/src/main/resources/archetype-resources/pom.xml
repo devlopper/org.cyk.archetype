@@ -18,14 +18,14 @@
 	<url>http://www.cykcorp.org</url>
 	
 	<modules>
-		<module>../model</module>
-		<module>../dao-api</module>
-		<module>../dao-impl-jpa</module>
-		<module>../service-api</module>
-		<module>../service-impl-ejb</module>
-		<module>../ui-web-primefaces</module>
+		<module>../${systemId}-model</module>
+		<module>../${systemId}-persistence-api</module>
+		<module>../${systemId}-persistence-impl-jpa</module>
+		<module>../${systemId}-business-api</module>
+		<module>../${systemId}-business-impl-ejb</module>
+		<module>../${systemId}-ui-web-primefaces</module>
+		<module>../${systemId}-application-resources</module>
 		<module>../application</module>
-		<module>../application-resources</module>
 	</modules>
 
 	<properties>

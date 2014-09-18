@@ -9,17 +9,23 @@
 		<version>${version}</version>
 	</parent>
 
-	<name>Domain Model</name>
-
-	<artifactId>${systemId}-model</artifactId>
+	<name>Persistence API</name>
+	
+	<groupId>org.cyk.system.${systemId}.persistence</groupId>
+	<artifactId>${systemId}-persistence-api</artifactId>
 	<packaging>jar</packaging>
 	
 	<dependencies>
 		<dependency>
-			<groupId>org.cyk.system.root</groupId>
-			<artifactId>root-model</artifactId>
+			<groupId>org.cyk.system.root.persistence</groupId>
+			<artifactId>root-persistence-api</artifactId>
 			<version>${rootVersion}</version>
 		</dependency>
-	</dependencies>	
+		<dependency>
+			<groupId>org.cyk.system.${systemId}</groupId>
+			<artifactId>${systemId}-model</artifactId>
+			<version>${version}</version>
+		</dependency>
+	</dependencies>		
 
 </project>
