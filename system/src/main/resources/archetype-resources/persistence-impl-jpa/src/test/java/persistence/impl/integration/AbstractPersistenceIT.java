@@ -11,9 +11,7 @@ import lombok.Getter;
 import org.cyk.system.root.model.AbstractIdentifiable;
 import org.cyk.system.root.persistence.api.GenericDao;
 import org.cyk.system.root.persistence.impl.AbstractPersistenceService;
-import org.cyk.system.root.persistence.impl.PersistenceIntegrationTestHelper;
 import org.cyk.utility.common.test.AbstractIntegrationTestJpaBased;
-import org.cyk.utility.common.test.ArchiveBuilder;
 import org.cyk.utility.common.test.TestMethod;
 import org.jboss.shrinkwrap.api.Archive;
 
@@ -25,17 +23,9 @@ import org.jboss.shrinkwrap.api.Archive;
 public abstract class AbstractPersistenceIT extends AbstractIntegrationTestJpaBased {
 	 
 	private static final long serialVersionUID = -3977685343817022628L;
-
-	public static ArchiveBuilder deployment(Class<?>[] classes){
-		ArchiveBuilder builder = new ArchiveBuilder();
-		builder.create().addClasses(PersistenceIntegrationTestHelper.BASE_CLASSES)
-		.persistence(classes);
-		return builder;
-	}
-		
+	
 	@Inject @Getter private GenericDao genericDao;
-	
-	
+		
 	@Override
     protected void _execute_() {
         super._execute_();
@@ -57,12 +47,12 @@ public abstract class AbstractPersistenceIT extends AbstractIntegrationTestJpaBa
 	
 	/* Shortcut */
 	
-	protected void create(AbstractIdentifiable object){
-		genericDao.create(object);
+	protected AbstractIdentifiable create(AbstractIdentifiable object){
+		return genericDao.create(object);
 	}
 	
-	protected void update(AbstractIdentifiable object){
-		genericDao.update(object);
+	protected AbstractIdentifiable update(AbstractIdentifiable object){
+		return genericDao.update(object);
 	}
 	
 	public static Archive<?> createRootDeployment() {

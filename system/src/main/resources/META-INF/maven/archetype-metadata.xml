@@ -178,33 +178,70 @@
 				<include>**/*.*</include>
 			</includes>
 		</fileSet>	
-		<!-- ui-web -->
+		<!-- ui-web-api -->
 		<fileSet filtered="true">
-			<directory>ui-web-primefaces</directory>
+			<directory>ui-web-primefaces-api</directory>
 			<includes>
 				<include>pom.xml</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true" packaged="true">
-			<directory>ui-web-primefaces/src/main/java</directory>
-			<includes>
-				<include>**/*.java</include>
-			</includes>
-		</fileSet>
-		<fileSet filtered="true" packaged="true">
-			<directory>ui-web-primefaces/src/test/java</directory>
+			<directory>ui-web-primefaces-api/src/main/java</directory>
 			<includes>
 				<include>**/*.java</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true">
-			<directory>ui-web-primefaces/src/test/resources</directory>
+			<directory>ui-web-primefaces-api/src/main/resources</directory>
+			<includes>
+				<include>**/*.*</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true" packaged="true">
+			<directory>ui-web-primefaces-api/src/test/java</directory>
+			<includes>
+				<include>**/*.java</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true">
+			<directory>ui-web-primefaces-api/src/test/resources</directory>
+			<includes>
+				<include>**/*.*</include>
+			</includes>
+		</fileSet>	
+		<!-- ui-web-app -->
+		<fileSet filtered="true">
+			<directory>ui-web-primefaces-app</directory>
+			<includes>
+				<include>pom.xml</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true" packaged="true">
+			<directory>ui-web-primefaces-app/src/main/java</directory>
+			<includes>
+				<include>**/*.java</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true">
+			<directory>ui-web-primefaces-app/src/main/resources</directory>
+			<includes>
+				<include>**/*.*</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true" packaged="true">
+			<directory>ui-web-primefaces-app/src/test/java</directory>
+			<includes>
+				<include>**/*.java</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true">
+			<directory>ui-web-primefaces-app/src/test/resources</directory>
 			<includes>
 				<include>**/*.*</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true">
-			<directory>ui-web-primefaces/src/main/web</directory>
+			<directory>ui-web-primefaces-app/src/main/web</directory>
 			<includes>
 				<include>**/*.*</include>
 			</includes>

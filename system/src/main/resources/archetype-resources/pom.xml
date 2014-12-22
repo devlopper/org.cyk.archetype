@@ -23,8 +23,10 @@
 		<module>../${systemId}-persistence-impl-jpa</module>
 		<module>../${systemId}-business-api</module>
 		<module>../${systemId}-business-impl-ejb</module>
-		<module>../${systemId}-ui-web-primefaces</module>
+		<module>../${systemId}-ui-web-primefaces-api</module>
 		<module>../${systemId}-application-resources</module>
+		
+		<module>../${systemId}-ui-web-primefaces-app</module>
 		<module>../application</module>
 	</modules>
 

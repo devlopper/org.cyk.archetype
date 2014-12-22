@@ -1,7 +1,7 @@
 #set( $symbol_pound = '#' )
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
-package ${package}.business.impl;
+package ${package}.ui.web.primefaces;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

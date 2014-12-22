@@ -10,10 +10,10 @@
 		<version>${version}</version>
 	</parent>
 
-	<name>Web UI based on Primefaces</name>
+	<name>Web UI based on Primefaces App</name>
 
-	<groupId>org.cyk.system.${systemId}.ui.web.jsf</groupId>
-	<artifactId>${systemId}-ui-web-primefaces</artifactId>
+	<groupId>org.cyk.system.${systemId}.ui.web.jsf.primefaces</groupId>
+	<artifactId>${systemId}-ui-web-primefaces-app</artifactId>
 	<packaging>war</packaging>
 	
 	<repositories>
@@ -43,15 +43,21 @@
 		
 		<dependency>
 			<groupId>org.cyk.system.${systemId}.business</groupId>
-			<artifactId>${systemId}-business-api</artifactId>
+			<artifactId>${systemId}-business-impl-ejb</artifactId>
 			<version>${version}</version>
-			<scope>provided</scope>
+			<type>ejb</type>
 		</dependency>
 		
 		<dependency>
-			<groupId>org.cyk.system.root.ui.web.jsf.primefaces</groupId>
-			<artifactId>root-web-primefaces-api</artifactId>
-			<version>${rootVersion}</version>
+			<groupId>org.cyk.system.${systemId}.ui.web.jsf.primefaces</groupId>
+			<artifactId>${systemId}-ui-web-primefaces-api</artifactId>
+			<version>${version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.cyk.system.${systemId}</groupId>
+			<artifactId>${systemId}-application-resources</artifactId>
+			<version>${version}</version>
 		</dependency>
 				
 	</dependencies>	

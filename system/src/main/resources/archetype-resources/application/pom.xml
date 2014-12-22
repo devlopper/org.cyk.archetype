@@ -37,20 +37,20 @@
 					<generateApplicationXml>false</generateApplicationXml>
 					<version>${earVersion}</version>
 					<defaultLibBundleDir>lib</defaultLibBundleDir>
-					<modules>
+					<!--modules>
 						<webModule>
 							<groupId>org.cyk.system.${systemId}.ui.web.jsf</groupId>
 							<artifactId>${systemId}-ui-web-primefaces</artifactId>
 							<bundleFileName>${systemId}.war</bundleFileName>
 							<contextRoot>/${systemId}</contextRoot>
 						</webModule>
-					</modules>
+					</modules-->
 				</configuration>
 			</plugin>
 		</plugins>
 	</build>
 	
-	<dependencies>
+	<!--dependencies>
 		<dependency>
 			<groupId>org.cyk.system.${systemId}.business</groupId>
 			<artifactId>${systemId}-business-impl-ejb</artifactId>
@@ -68,6 +68,6 @@
 			<artifactId>${systemId}-application-resources</artifactId>
 			<version>0.0.1</version>
 		</dependency>
-	</dependencies>	
+	</dependencies-->	
 
 </project>
