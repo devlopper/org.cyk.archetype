@@ -116,6 +116,12 @@
 				<include>**/*.*</include>
 			</includes>
 		</fileSet>	
+		<fileSet filtered="false">
+			<directory>persistence-impl-jpa/src/test/resources-glassfish-embedded</directory>
+			<includes>
+				<include>**/*.*</include>
+			</includes>
+		</fileSet>	
 		<!-- business-api -->
 		<fileSet filtered="true">
 			<directory>business-api</directory>
@@ -174,6 +180,12 @@
 		</fileSet>	
 		<fileSet filtered="true">
 			<directory>business-impl-ejb/src/test/resources</directory>
+			<includes>
+				<include>**/*.*</include>
+			</includes>
+		</fileSet>	
+		<fileSet filtered="false">
+			<directory>business-impl-ejb/src/test/resources-glassfish-embedded</directory>
 			<includes>
 				<include>**/*.*</include>
 			</includes>
