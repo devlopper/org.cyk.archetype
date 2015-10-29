@@ -31,7 +31,7 @@ public class WebManager extends AbstractPrimefacesManager implements Serializabl
 	@Override
 	protected void initialisation() {
 		INSTANCE = this;
-		identifier = ${systemId};
+		identifier = "${systemId}";
 		super.initialisation();  
 		
 		

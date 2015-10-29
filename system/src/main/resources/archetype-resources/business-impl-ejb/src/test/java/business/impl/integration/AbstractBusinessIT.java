@@ -3,11 +3,17 @@
 #set( $symbol_escape = '\' )
 package ${package}.business.impl.integration;
 
+import java.math.BigDecimal;
+
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
+import javax.transaction.UserTransaction;
 
 import org.cyk.system.root.business.api.GenericBusiness;
 import org.cyk.system.root.business.api.party.ApplicationBusiness;
+import org.cyk.system.root.business.impl.AbstractFakedDataProducer;
+import org.cyk.system.root.business.impl.AbstractFakedDataProducer.FakedDataProducerAdapter;
+import org.cyk.system.root.business.impl.AbstractTestHelper;
 import org.cyk.system.root.business.impl.BusinessIntegrationTestHelper;
 import org.cyk.system.root.business.impl.RootBusinessLayer;
 import org.cyk.system.root.business.impl.RootTestHelper;
@@ -15,10 +21,17 @@ import org.cyk.system.root.business.impl.validation.AbstractValidator;
 import org.cyk.system.root.business.impl.validation.DefaultValidator;
 import org.cyk.system.root.business.impl.validation.ExceptionUtils;
 import org.cyk.system.root.business.impl.validation.ValidatorMap;
+import ${package}.business.impl.BusinessLayer;
+import ${package}.business.impl.BusinessTestHelper;
 import org.cyk.system.root.model.AbstractIdentifiable;
 import org.cyk.system.root.persistence.impl.GenericDaoImpl;
+import org.cyk.utility.test.Transaction;
 import org.cyk.utility.test.integration.AbstractIntegrationTestJpaBased;
+import org.cyk.utility.common.test.DefaultTestEnvironmentAdapter;
 import org.cyk.utility.test.ArchiveBuilder;
+import org.jboss.arquillian.container.test.api.Deployment;
+import org.jboss.shrinkwrap.api.Archive;
+import org.junit.Assert;
 
 import org.jboss.shrinkwrap.api.Archive;
 
@@ -26,14 +39,54 @@ public abstract class AbstractBusinessIT extends AbstractIntegrationTestJpaBased
 
 	private static final long serialVersionUID = -5752455124275831171L;
 	
-	@Inject protected ApplicationBusiness applicationBusiness;
-	@Inject protected ExceptionUtils exceptionUtils;
+	static {
+		AbstractTestHelper.TEST_ENVIRONMENT_LISTENERS.add(new DefaultTestEnvironmentAdapter(){
+    		@Override
+    		public void assertEquals(String message, Object expected, Object actual) {
+    			Assert.assertEquals(message, expected, actual);
+    		}
+    		@Override
+    		public String formatBigDecimal(BigDecimal value) {
+    			return RootBusinessLayer.getInstance().getNumberBusiness().format(value);
+    		}
+    	});
+	}
+	
+	@Inject protected ExceptionUtils exceptionUtils; 
 	@Inject protected DefaultValidator defaultValidator;
-	@Inject private GenericDaoImpl g;
+	@Inject protected GenericDaoImpl g;
 	@Inject protected GenericBusiness genericBusiness;
-	@Inject protected RootTestHelper rootTestHelper;
+	@Inject protected ApplicationBusiness applicationBusiness;
 	
 	@Inject protected ValidatorMap validatorMap;// = ValidatorMap.getInstance();
+	@Inject protected RootBusinessLayer rootBusinessLayer;
+	@Inject protected RootTestHelper rootTestHelper;
+	
+	@Inject protected BusinessLayer ${systemId}BusinessLayer;
+	@Inject protected BusinessTestHelper ${systemId}BusinessTestHelper;
+	
+	@Inject protected UserTransaction userTransaction;
+    
+	@Deployment
+    public static Archive<?> createDeployment() {
+    	Archive<?> archive = createRootDeployment();
+    	return archive;
+    }
+	
+	protected void installApplication(Boolean fake){
+    	${systemId}BusinessLayer.installApplication(fake);
+    }
+    
+    protected void installApplication(){
+    	long t = System.currentTimeMillis();
+    	installApplication(Boolean.TRUE);
+    	produce(getFakedDataProducer());
+    	System.out.println( ((System.currentTimeMillis()-t)/1000)+" s" );
+    }
+	
+    protected AbstractFakedDataProducer getFakedDataProducer(){
+    	return null;
+    }
     
     @Override
     public EntityManager getEntityManager() {
@@ -64,26 +117,7 @@ public abstract class AbstractBusinessIT extends AbstractIntegrationTestJpaBased
     protected AbstractIdentifiable update(AbstractIdentifiable object){
         return genericBusiness.update(object);
     }
-    
-    protected void validate(Object object){
-        if(object==null)
-            return;
-        @SuppressWarnings("unchecked")
-        AbstractValidator<Object> validator = (AbstractValidator<Object>) validatorMap.validatorOf(object.getClass());
-        if(validator==null){
-            //log.warning("No validator has been found. The default one will be used");
-            //validator = defaultValidator;
-            return;
-        }
-        try {
-            validator.validate(object);
-        } catch (Exception e) {}
         
-        if(!Boolean.TRUE.equals(validator.isSuccess()))
-            System.out.println(validator.getMessagesAsString());
-        
-    }
-    
     public static Archive<?> createRootDeployment() {
         return  
                 new ArchiveBuilder().create().getArchive().
@@ -93,15 +127,31 @@ public abstract class AbstractBusinessIT extends AbstractIntegrationTestJpaBased
                 ;
     } 
     
-    @Override
-    protected void populate() {}
+    @Override protected void populate() {}
     
     @Override protected void create() {}
     @Override protected void delete() {}
     @Override protected void read() {}
     @Override protected void update() {}
+
+    protected FakedDataProducerAdapter fakedDataProducerAdapter(){
+    	return new FakedDataProducerAdapter(){
+    		@Override
+    		public void flush() {
+    			super.flush();
+    			getEntityManager().flush();
+    		}
+    	};
+    }
     
-    protected void fakeInstallation(){
-    	applicationBusiness.install(RootBusinessLayer.fakeInstallation());
+    protected void produce(final AbstractFakedDataProducer fakedDataProducer){
+    	if(fakedDataProducer==null)
+    		return ;
+    	new Transaction(this,userTransaction,null){
+			@Override
+			public void _execute_() {
+				fakedDataProducer.produce(fakedDataProducerAdapter());
+			}
+    	}.run();
     }
 }
