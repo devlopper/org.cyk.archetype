@@ -27,10 +27,6 @@ public class BusinessLayer extends AbstractBusinessLayer implements Serializable
 	protected void initialisation() {
 		INSTANCE = this;
 		super.initialisation();
-		registerResourceBundle("${package}.model.resources.entity", getClass().getClassLoader());
-		registerResourceBundle("${package}.model.resources.message", getClass().getClassLoader());
-		registerResourceBundle("${package}.business.impl.resources.message", getClass().getClassLoader());
-		
 	}
 	
 	

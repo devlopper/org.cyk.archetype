@@ -5,7 +5,6 @@ package ${package}.ui.web.primefaces;
 
 import java.io.Serializable;
 
-import javax.inject.Inject;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.annotation.WebListener;
 
