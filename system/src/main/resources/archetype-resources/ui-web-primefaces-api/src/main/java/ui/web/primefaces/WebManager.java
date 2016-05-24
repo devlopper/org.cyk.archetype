@@ -26,8 +26,6 @@ public class WebManager extends AbstractPrimefacesManager implements Serializabl
 
 	private static WebManager INSTANCE;
 	
-	
-	
 	@Override
 	protected void initialisation() {
 		INSTANCE = this;
@@ -35,27 +33,10 @@ public class WebManager extends AbstractPrimefacesManager implements Serializabl
 		super.initialisation();  
 		
 		
-		WebEnvironmentAdapter.SECURED_URL_PROVIDERS.add(new SecuredUrlProvider() {
-			
-			@Override
-			public void provide() {
-				
-			}
-		});
 	}
 		
 	public static WebManager getInstance() {
 		return INSTANCE;
 	}
-	
-	@Override
-	public SystemMenu systemMenu(AbstractUserSession userSession) {
-		SystemMenu systemMenu = new SystemMenu();
-		
-			
-		return systemMenu;
-	}
-	
-	
 	
 }
