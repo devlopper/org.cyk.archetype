@@ -7,10 +7,10 @@ import java.io.Serializable;
 
 import javax.inject.Singleton;
 
-import org.cyk.system.root.business.impl.AbstractTestHelper;
+import org.cyk.system.root.business.impl.AbstractBusinessTestHelper;
 
 @Singleton
-public class BusinessTestHelper extends AbstractTestHelper implements Serializable {
+public class BusinessTestHelper extends AbstractBusinessTestHelper implements Serializable {
 
 	private static final long serialVersionUID = -6893154890151909538L;
 	private static BusinessTestHelper INSTANCE;
