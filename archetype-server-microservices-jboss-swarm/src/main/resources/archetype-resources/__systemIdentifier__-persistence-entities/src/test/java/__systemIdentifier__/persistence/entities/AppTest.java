@@ -1,7 +1,7 @@
 #set( $symbol_pound = '#' )
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
-package ${package}.model;
+package ${package}.${systemIdentifier}.persistence.entities;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

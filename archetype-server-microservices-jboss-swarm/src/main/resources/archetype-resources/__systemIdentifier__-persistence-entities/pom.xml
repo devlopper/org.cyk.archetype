@@ -9,7 +9,7 @@
 		<version>${version}</version>
 	</parent>
 
-	<name>Domain Model</name>
+	<name>Persistence entities</name>
 
 	<artifactId>${systemIdentifier}-persistence-entities</artifactId>
 	<packaging>jar</packaging>
