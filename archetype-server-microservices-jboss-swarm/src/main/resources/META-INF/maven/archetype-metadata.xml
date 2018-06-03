@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archetype-descriptor xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0 http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd" name="global-pom"
+    xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <requiredProperties>
+  	<requiredProperty key="groupId"><defaultValue>none</defaultValue></requiredProperty>
+  	<requiredProperty key="artifactId"><defaultValue>pom</defaultValue></requiredProperty>
+  	
+  	<requiredProperty key="version"><defaultValue>0.0.1</defaultValue></requiredProperty>
+  	
+  	<requiredProperty key="systemIdentifier"/>
+  	<requiredProperty key="package"><defaultValue>org.cyk.system</defaultValue></requiredProperty>
+  	
+  </requiredProperties>
+
+	<fileSets>
+		<fileSet filtered="true">
+			<directory></directory>
+			<includes>
+				<include>pom.xml</include>
+			</includes>
+		</fileSet>
+		
+		<!-- persistence entities -->
+		<fileSet filtered="true">
+			<directory>__systemIdentifier__-persistence-entities</directory>
+			<includes>
+				<include>pom.xml</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true" packaged="true">
+			<directory>__systemIdentifier__-persistence-entities/src/main/java</directory>
+			<includes>
+				<include>**/*.java</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true">
+			<directory>__systemIdentifier__-persistence-entities/src/main/resources</directory>
+			<includes>
+				<include>**/*.*</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true" packaged="true">
+			<directory>__systemIdentifier__-persistence-entities/src/test/java</directory>
+			<includes>
+				<include>**/*.java</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true">
+			<directory>__systemIdentifier__-persistence-entities/src/test/resources</directory>
+			<includes>
+				<include>**/*.*</include>
+			</includes>
+		</fileSet>
+		
+		<!-- persistence-api -->
+		<!--fileSet filtered="true">
+			<directory>persistence-api</directory>
+			<includes>
+				<include>pom.xml</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true" packaged="true">
+			<directory>persistence-api/src/main/java</directory>
+			<includes>
+				<include>**/*.java</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true">
+			<directory>persistence-api/src/main/resources</directory>
+			<includes>
+				<include>**/*.*</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true" packaged="true">
+			<directory>persistence-api/src/test/java</directory>
+			<includes>
+				<include>**/*.java</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true">
+			<directory>persistence-api/src/test/resources</directory>
+			<includes>
+				<include>**/*.*</include>
+			</includes>
+		</fileSet-->
+		
+		<!-- persistence-impl -->
+		<!--fileSet filtered="true">
+			<directory>persistence-impl-jpa</directory>
+			<includes>
+				<include>pom.xml</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true" packaged="true">
+			<directory>persistence-impl-jpa/src/main/java</directory>
+			<includes>
+				<include>**/*.java</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true">
+			<directory>persistence-impl-jpa/src/main/resources</directory>
+			<includes>
+				<include>**/*.*</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true" packaged="true">
+			<directory>persistence-impl-jpa/src/test/java</directory>
+			<includes>
+				<include>**/*.java</include>
+			</includes>
+		</fileSet>	
+		<fileSet filtered="true">
+			<directory>persistence-impl-jpa/src/test/resources</directory>
+			<includes>
+				<include>**/*.*</include>
+			</includes>
+		</fileSet>	
+		<fileSet filtered="false">
+			<directory>persistence-impl-jpa/src/test/resources-glassfish-embedded</directory>
+			<includes>
+				<include>**/*.*</include>
+			</includes>
+		</fileSet-->	
+		
+		<!-- business-api -->
+		<!--fileSet filtered="true">
+			<directory>business-api</directory>
+			<includes>
+				<include>pom.xml</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true" packaged="true">
+			<directory>business-api/src/main/java</directory>
+			<includes>
+				<include>**/*.java</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true">
+			<directory>business-api/src/main/resources</directory>
+			<includes>
+				<include>**/*.*</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true" packaged="true">
+			<directory>business-api/src/test/java</directory>
+			<includes>
+				<include>**/*.java</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true">
+			<directory>business-api/src/test/resources</directory>
+			<includes>
+				<include>**/*.*</include>
+			</includes>
+		</fileSet-->
+		
+		<!-- business-impl -->
+		<!--fileSet filtered="true">
+			<directory>business-impl-ejb</directory>
+			<includes>
+				<include>pom.xml</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true" packaged="true">
+			<directory>business-impl-ejb/src/main/java</directory>
+			<includes>
+				<include>**/*.java</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true">
+			<directory>business-impl-ejb/src/main/resources</directory>
+			<includes>
+				<include>**/*.*</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true" packaged="true">
+			<directory>business-impl-ejb/src/test/java</directory>
+			<includes>
+				<include>**/*.java</include>
+			</includes>
+		</fileSet>	
+		<fileSet filtered="true">
+			<directory>business-impl-ejb/src/test/resources</directory>
+			<includes>
+				<include>**/*.*</include>
+			</includes>
+		</fileSet>	
+		<fileSet filtered="false">
+			<directory>business-impl-ejb/src/test/resources-glassfish-embedded</directory>
+			<includes>
+				<include>**/*.*</include>
+			</includes>
+		</fileSet-->	
+				
+	</fileSets>  
+	  
+</archetype-descriptor>
