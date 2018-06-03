@@ -119,7 +119,7 @@
 		
 		<!-- Business -->
 		
-		<!-- business entities --><!--
+		<!-- business entities -->
 		<fileSet filtered="true">
 			<directory>__systemIdentifier__-business-entities</directory>
 			<includes>
@@ -150,8 +150,8 @@
 				<include>**/*.*</include>
 			</includes>
 		</fileSet>
-		-->
-		<!-- business-api --><!--
+		
+		<!-- business-api -->
 		<fileSet filtered="true">
 			<directory>__systemIdentifier__-business-api</directory>
 			<includes>
@@ -183,8 +183,8 @@
 				<include>**/*.*</include>
 			</includes>
 		</fileSet>
-		-->
-		<!-- business-impl --><!--
+		
+		<!-- business-impl -->
 		<fileSet filtered="true">
 			<directory>__systemIdentifier__-business-impl</directory>
 			<includes>
@@ -215,10 +215,10 @@
 				<include>**/*.*</include>
 			</includes>
 		</fileSet>	
-		-->
+		
 		<!-- Representation -->
 		
-		<!-- representation entities --><!--
+		<!-- representation entities -->
 		<fileSet filtered="true">
 			<directory>__systemIdentifier__-representation-entities</directory>
 			<includes>
@@ -249,8 +249,8 @@
 				<include>**/*.*</include>
 			</includes>
 		</fileSet>
-		-->
-		<!-- representation-api --><!--
+		
+		<!-- representation-api -->
 		<fileSet filtered="true">
 			<directory>__systemIdentifier__-representation-api</directory>
 			<includes>
@@ -282,8 +282,8 @@
 				<include>**/*.*</include>
 			</includes>
 		</fileSet>
-		-->
-		<!-- representation-impl --> <!--
+		
+		<!-- representation-impl --> 
 		<fileSet filtered="true">
 			<directory>__systemIdentifier__-representation-impl</directory>
 			<includes>
@@ -314,7 +314,7 @@
 				<include>**/*.*</include>
 			</includes>
 		</fileSet>	
-		-->		
+			
 	</fileSets>  
 	  
 </archetype-descriptor>

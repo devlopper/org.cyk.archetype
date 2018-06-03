@@ -5,36 +5,26 @@
 
 	<parent>
 		<groupId>org.cyk.system.${systemIdentifier}</groupId>
-		<artifactId>pom</artifactId>
+		<artifactId>${systemIdentifier}-_pom</artifactId>
 		<version>${version}</version>
 	</parent>
 
-	<name>Web UI based on Primefaces API</name>
+	<name>Representation Implementation based on Resteasy</name>
 	
-	<groupId>org.cyk.system.${systemIdentifier}.ui.web.jsf.primefaces</groupId>
-	<artifactId>${systemIdentifier}-ui-web-primefaces-api</artifactId>
-	<packaging>jar</packaging>
+	<groupId>org.cyk.system.${systemIdentifier}.representation</groupId>
+	<artifactId>${systemIdentifier}-representation-impl</artifactId>
+	<packaging>war</packaging>
 
-	<repositories>
-		<repository>
-			<id>prime-repo</id>
-			<name>Prime Repo</name>
-			<url>http://repository.primefaces.org</url>
-		</repository>
-	</repositories>
-	
 	<dependencies>
 		<dependency>
-			<groupId>org.cyk.system.${systemIdentifier}.business</groupId>
-			<artifactId>${systemIdentifier}-business-impl-ejb</artifactId>
+			<groupId>org.cyk.system.${systemIdentifier}.representation</groupId>
+			<artifactId>${systemIdentifier}-representation-api</artifactId>
 			<version>${version}</version>
-			<scope>provided</scope>
 		</dependency>
-		
 		<dependency>
-			<groupId>org.cyk.system.root.ui.web.jsf.primefaces</groupId>
-			<artifactId>root-web-primefaces-api</artifactId>
-			<version>${rootVersion}</version>
+			<groupId>org.cyk.system.${systemIdentifier}.business</groupId>
+			<artifactId>${systemIdentifier}-business-impl</artifactId>
+			<version>${version}</version>
 		</dependency>
 	</dependencies>		
 

@@ -5,11 +5,11 @@
 
 	<parent>
 		<groupId>org.cyk.system.${systemIdentifier}</groupId>
-		<artifactId>pom</artifactId>
+		<artifactId>${systemIdentifier}-_pom</artifactId>
 		<version>${version}</version>
 	</parent>
 
-	<name>Business API</name>
+	<name>Business Entities</name>
 	
 	<groupId>org.cyk.system.${systemIdentifier}.business</groupId>
 	<artifactId>${systemIdentifier}-business-api</artifactId>
@@ -17,13 +17,8 @@
 	
 	<dependencies>
 		<dependency>
-			<groupId>org.cyk.system.root.business</groupId>
-			<artifactId>root-business-api</artifactId>
-			<version>${rootVersion}</version>
-		</dependency>
-		<dependency>
 			<groupId>org.cyk.system.${systemIdentifier}</groupId>
-			<artifactId>${systemIdentifier}-model</artifactId>
+			<artifactId>${systemIdentifier}-persistence-entities</artifactId>
 			<version>${version}</version>
 		</dependency>
 	</dependencies>	
