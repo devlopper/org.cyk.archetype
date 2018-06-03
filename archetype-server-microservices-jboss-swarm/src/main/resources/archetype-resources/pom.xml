@@ -9,7 +9,7 @@
 	</parent>
 
 	<groupId>org.cyk.system.${systemIdentifier}</groupId>
-	<artifactId>pom</artifactId>
+	<artifactId>${systemIdentifier}-_pom</artifactId>
 	<version>${version}</version>
 	<packaging>pom</packaging>
 
@@ -17,14 +17,20 @@
 	<url>http://www.cykcorp.org</url>
 	
 	<modules>
+		<!-- Persistence Layer -->
 		<module>../${systemIdentifier}-persistence-entities</module>
 		<module>../${systemIdentifier}-persistence-api</module>
 		<module>../${systemIdentifier}-persistence-impl</module>
+		
+		<!-- Business Layer -->
+		<module>../${systemIdentifier}-business-entities</module>
 		<module>../${systemIdentifier}-business-api</module>
 		<module>../${systemIdentifier}-business-impl</module>
-		<module>../${systemIdentifier}-rest-entities</module>
-		<module>../${systemIdentifier}-rest-api</module>
-		<module>../${systemIdentifier}-rest-impl</module>
+		
+		<!-- Representation Layer -->
+		<module>../${systemIdentifier}-representation-entities</module>
+		<module>../${systemIdentifier}-representation-api</module>
+		<module>../${systemIdentifier}-representation-impl</module>
 	</modules>
 
 </project>

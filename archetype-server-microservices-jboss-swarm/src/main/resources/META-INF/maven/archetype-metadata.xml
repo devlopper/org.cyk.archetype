@@ -4,23 +4,22 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
   <requiredProperties>
+  	<requiredProperty key="systemIdentifier"/>
   	<requiredProperty key="groupId"><defaultValue>none</defaultValue></requiredProperty>
   	<requiredProperty key="artifactId"><defaultValue>pom</defaultValue></requiredProperty>
-  	
   	<requiredProperty key="version"><defaultValue>0.0.1</defaultValue></requiredProperty>
-  	
-  	<requiredProperty key="systemIdentifier"/>
   	<requiredProperty key="package"><defaultValue>org.cyk.system</defaultValue></requiredProperty>
-  	
   </requiredProperties>
 
 	<fileSets>
 		<fileSet filtered="true">
-			<directory></directory>
+			<directory>__systemIdentifier__-_pom</directory>
 			<includes>
 				<include>pom.xml</include>
 			</includes>
 		</fileSet>
+		
+		<!-- Persistence -->
 		
 		<!-- persistence entities -->
 		<fileSet filtered="true">
@@ -55,145 +54,267 @@
 		</fileSet>
 		
 		<!-- persistence-api -->
-		<!--fileSet filtered="true">
-			<directory>persistence-api</directory>
+		<fileSet filtered="true">
+			<directory>__systemIdentifier__-persistence-api</directory>
 			<includes>
 				<include>pom.xml</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true" packaged="true">
-			<directory>persistence-api/src/main/java</directory>
+			<directory>__systemIdentifier__-persistence-api/src/main/java</directory>
 			<includes>
 				<include>**/*.java</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true">
-			<directory>persistence-api/src/main/resources</directory>
+			<directory>__systemIdentifier__-persistence-api/src/main/resources</directory>
 			<includes>
 				<include>**/*.*</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true" packaged="true">
-			<directory>persistence-api/src/test/java</directory>
+			<directory>__systemIdentifier__-persistence-api/src/test/java</directory>
 			<includes>
 				<include>**/*.java</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true">
-			<directory>persistence-api/src/test/resources</directory>
+			<directory>__systemIdentifier__-persistence-api/src/test/resources</directory>
 			<includes>
 				<include>**/*.*</include>
 			</includes>
-		</fileSet-->
+		</fileSet>
 		
 		<!-- persistence-impl -->
-		<!--fileSet filtered="true">
-			<directory>persistence-impl-jpa</directory>
+		<fileSet filtered="true">
+			<directory>__systemIdentifier__-persistence-impl</directory>
 			<includes>
 				<include>pom.xml</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true" packaged="true">
-			<directory>persistence-impl-jpa/src/main/java</directory>
+			<directory>__systemIdentifier__-persistence-impl/src/main/java</directory>
 			<includes>
 				<include>**/*.java</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true">
-			<directory>persistence-impl-jpa/src/main/resources</directory>
+			<directory>__systemIdentifier__-persistence-impl/src/main/resources</directory>
 			<includes>
 				<include>**/*.*</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true" packaged="true">
-			<directory>persistence-impl-jpa/src/test/java</directory>
+			<directory>__systemIdentifier__-persistence-impl/src/test/java</directory>
 			<includes>
 				<include>**/*.java</include>
 			</includes>
 		</fileSet>	
 		<fileSet filtered="true">
-			<directory>persistence-impl-jpa/src/test/resources</directory>
+			<directory>__systemIdentifier__-persistence-impl/src/test/resources</directory>
 			<includes>
 				<include>**/*.*</include>
 			</includes>
 		</fileSet>	
-		<fileSet filtered="false">
-			<directory>persistence-impl-jpa/src/test/resources-glassfish-embedded</directory>
-			<includes>
-				<include>**/*.*</include>
-			</includes>
-		</fileSet-->	
 		
-		<!-- business-api -->
-		<!--fileSet filtered="true">
-			<directory>business-api</directory>
-			<includes>
-				<include>pom.xml</include>
-			</includes>
-		</fileSet>
-		<fileSet filtered="true" packaged="true">
-			<directory>business-api/src/main/java</directory>
-			<includes>
-				<include>**/*.java</include>
-			</includes>
-		</fileSet>
-		<fileSet filtered="true">
-			<directory>business-api/src/main/resources</directory>
-			<includes>
-				<include>**/*.*</include>
-			</includes>
-		</fileSet>
-		<fileSet filtered="true" packaged="true">
-			<directory>business-api/src/test/java</directory>
-			<includes>
-				<include>**/*.java</include>
-			</includes>
-		</fileSet>
-		<fileSet filtered="true">
-			<directory>business-api/src/test/resources</directory>
-			<includes>
-				<include>**/*.*</include>
-			</includes>
-		</fileSet-->
+		<!-- Business -->
 		
-		<!-- business-impl -->
-		<!--fileSet filtered="true">
-			<directory>business-impl-ejb</directory>
+		<!-- business entities --><!--
+		<fileSet filtered="true">
+			<directory>__systemIdentifier__-business-entities</directory>
 			<includes>
 				<include>pom.xml</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true" packaged="true">
-			<directory>business-impl-ejb/src/main/java</directory>
+			<directory>__systemIdentifier__-business-entities/src/main/java</directory>
 			<includes>
 				<include>**/*.java</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true">
-			<directory>business-impl-ejb/src/main/resources</directory>
+			<directory>__systemIdentifier__-business-entities/src/main/resources</directory>
 			<includes>
 				<include>**/*.*</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true" packaged="true">
-			<directory>business-impl-ejb/src/test/java</directory>
+			<directory>__systemIdentifier__-business-entities/src/test/java</directory>
+			<includes>
+				<include>**/*.java</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true">
+			<directory>__systemIdentifier__-business-entities/src/test/resources</directory>
+			<includes>
+				<include>**/*.*</include>
+			</includes>
+		</fileSet>
+		-->
+		<!-- business-api --><!--
+		<fileSet filtered="true">
+			<directory>__systemIdentifier__-business-api</directory>
+			<includes>
+				<include>pom.xml</include>
+			</includes>
+		
+		</fileSet>
+		<fileSet filtered="true" packaged="true">
+			<directory>__systemIdentifier__-business-api/src/main/java</directory>
+			<includes>
+				<include>**/*.java</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true">
+			<directory>__systemIdentifier__-business-api/src/main/resources</directory>
+			<includes>
+				<include>**/*.*</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true" packaged="true">
+			<directory>__systemIdentifier__-business-api/src/test/java</directory>
+			<includes>
+				<include>**/*.java</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true">
+			<directory>__systemIdentifier__-business-api/src/test/resources</directory>
+			<includes>
+				<include>**/*.*</include>
+			</includes>
+		</fileSet>
+		-->
+		<!-- business-impl --><!--
+		<fileSet filtered="true">
+			<directory>__systemIdentifier__-business-impl</directory>
+			<includes>
+				<include>pom.xml</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true" packaged="true">
+			<directory>__systemIdentifier__-business-impl/src/main/java</directory>
+			<includes>
+				<include>**/*.java</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true">
+			<directory>__systemIdentifier__-business-impl/src/main/resources</directory>
+			<includes>
+				<include>**/*.*</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true" packaged="true">
+			<directory>__systemIdentifier__-business-impl/src/test/java</directory>
 			<includes>
 				<include>**/*.java</include>
 			</includes>
 		</fileSet>	
 		<fileSet filtered="true">
-			<directory>business-impl-ejb/src/test/resources</directory>
+			<directory>__systemIdentifier__-business-impl/src/test/resources</directory>
 			<includes>
 				<include>**/*.*</include>
 			</includes>
 		</fileSet>	
-		<fileSet filtered="false">
-			<directory>business-impl-ejb/src/test/resources-glassfish-embedded</directory>
+		-->
+		<!-- Representation -->
+		
+		<!-- representation entities --><!--
+		<fileSet filtered="true">
+			<directory>__systemIdentifier__-representation-entities</directory>
+			<includes>
+				<include>pom.xml</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true" packaged="true">
+			<directory>__systemIdentifier__-representation-entities/src/main/java</directory>
+			<includes>
+				<include>**/*.java</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true">
+			<directory>__systemIdentifier__-representation-entities/src/main/resources</directory>
 			<includes>
 				<include>**/*.*</include>
 			</includes>
-		</fileSet-->	
-				
+		</fileSet>
+		<fileSet filtered="true" packaged="true">
+			<directory>__systemIdentifier__-representation-entities/src/test/java</directory>
+			<includes>
+				<include>**/*.java</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true">
+			<directory>__systemIdentifier__-representation-entities/src/test/resources</directory>
+			<includes>
+				<include>**/*.*</include>
+			</includes>
+		</fileSet>
+		-->
+		<!-- representation-api --><!--
+		<fileSet filtered="true">
+			<directory>__systemIdentifier__-representation-api</directory>
+			<includes>
+				<include>pom.xml</include>
+			</includes>
+		
+		</fileSet>
+		<fileSet filtered="true" packaged="true">
+			<directory>__systemIdentifier__-representation-api/src/main/java</directory>
+			<includes>
+				<include>**/*.java</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true">
+			<directory>__systemIdentifier__-representation-api/src/main/resources</directory>
+			<includes>
+				<include>**/*.*</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true" packaged="true">
+			<directory>__systemIdentifier__-representation-api/src/test/java</directory>
+			<includes>
+				<include>**/*.java</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true">
+			<directory>__systemIdentifier__-representation-api/src/test/resources</directory>
+			<includes>
+				<include>**/*.*</include>
+			</includes>
+		</fileSet>
+		-->
+		<!-- representation-impl --> <!--
+		<fileSet filtered="true">
+			<directory>__systemIdentifier__-representation-impl</directory>
+			<includes>
+				<include>pom.xml</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true" packaged="true">
+			<directory>__systemIdentifier__-representation-impl/src/main/java</directory>
+			<includes>
+				<include>**/*.java</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true">
+			<directory>__systemIdentifier__-representation-impl/src/main/resources</directory>
+			<includes>
+				<include>**/*.*</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true" packaged="true">
+			<directory>__systemIdentifier__-representation-impl/src/test/java</directory>
+			<includes>
+				<include>**/*.java</include>
+			</includes>
+		</fileSet>	
+		<fileSet filtered="true">
+			<directory>__systemIdentifier__-representation-impl/src/test/resources</directory>
+			<includes>
+				<include>**/*.*</include>
+			</includes>
+		</fileSet>	
+		-->		
 	</fileSets>  
 	  
 </archetype-descriptor>
