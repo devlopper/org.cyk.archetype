@@ -22,7 +22,7 @@
 		</dependency>
 		<dependency>
 			<groupId>org.cyk.system.${systemIdentifier}.persistence</groupId>
-			<artifactId>${systemIdentifier}-persistence-impl-jpa</artifactId>
+			<artifactId>${systemIdentifier}-persistence-impl</artifactId>
 			<version>${version}</version>
 		</dependency>
 	</dependencies>	

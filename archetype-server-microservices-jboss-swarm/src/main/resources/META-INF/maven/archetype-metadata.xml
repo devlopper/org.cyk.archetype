@@ -13,7 +13,7 @@
 
 	<fileSets>
 		<fileSet filtered="true">
-			<directory>__systemIdentifier__-_pom</directory>
+			<directory></directory>
 			<includes>
 				<include>pom.xml</include>
 			</includes>
@@ -32,6 +32,7 @@
 			<directory>__systemIdentifier__-persistence-entities/src/main/java</directory>
 			<includes>
 				<include>**/*.java</include>
+				<include>**/*.fake</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true">
@@ -44,6 +45,7 @@
 			<directory>__systemIdentifier__-persistence-entities/src/test/java</directory>
 			<includes>
 				<include>**/*.java</include>
+				<include>**/*.fake</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true">
@@ -64,6 +66,7 @@
 			<directory>__systemIdentifier__-persistence-api/src/main/java</directory>
 			<includes>
 				<include>**/*.java</include>
+				<include>**/*.fake</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true">
@@ -76,6 +79,7 @@
 			<directory>__systemIdentifier__-persistence-api/src/test/java</directory>
 			<includes>
 				<include>**/*.java</include>
+				<include>**/*.fake</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true">
@@ -96,6 +100,7 @@
 			<directory>__systemIdentifier__-persistence-impl/src/main/java</directory>
 			<includes>
 				<include>**/*.java</include>
+				<include>**/*.fake</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true">
@@ -108,6 +113,7 @@
 			<directory>__systemIdentifier__-persistence-impl/src/test/java</directory>
 			<includes>
 				<include>**/*.java</include>
+				<include>**/*.fake</include>
 			</includes>
 		</fileSet>	
 		<fileSet filtered="true">
@@ -130,6 +136,7 @@
 			<directory>__systemIdentifier__-business-entities/src/main/java</directory>
 			<includes>
 				<include>**/*.java</include>
+				<include>**/*.fake</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true">
@@ -142,6 +149,7 @@
 			<directory>__systemIdentifier__-business-entities/src/test/java</directory>
 			<includes>
 				<include>**/*.java</include>
+				<include>**/*.fake</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true">
@@ -163,6 +171,7 @@
 			<directory>__systemIdentifier__-business-api/src/main/java</directory>
 			<includes>
 				<include>**/*.java</include>
+				<include>**/*.fake</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true">
@@ -175,6 +184,7 @@
 			<directory>__systemIdentifier__-business-api/src/test/java</directory>
 			<includes>
 				<include>**/*.java</include>
+				<include>**/*.fake</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true">
@@ -195,6 +205,7 @@
 			<directory>__systemIdentifier__-business-impl/src/main/java</directory>
 			<includes>
 				<include>**/*.java</include>
+				<include>**/*.fake</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true">
@@ -207,6 +218,7 @@
 			<directory>__systemIdentifier__-business-impl/src/test/java</directory>
 			<includes>
 				<include>**/*.java</include>
+				<include>**/*.fake</include>
 			</includes>
 		</fileSet>	
 		<fileSet filtered="true">
@@ -229,6 +241,7 @@
 			<directory>__systemIdentifier__-representation-entities/src/main/java</directory>
 			<includes>
 				<include>**/*.java</include>
+				<include>**/*.fake</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true">
@@ -241,6 +254,7 @@
 			<directory>__systemIdentifier__-representation-entities/src/test/java</directory>
 			<includes>
 				<include>**/*.java</include>
+				<include>**/*.fake</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true">
@@ -262,6 +276,7 @@
 			<directory>__systemIdentifier__-representation-api/src/main/java</directory>
 			<includes>
 				<include>**/*.java</include>
+				
 			</includes>
 		</fileSet>
 		<fileSet filtered="true">
@@ -274,6 +289,7 @@
 			<directory>__systemIdentifier__-representation-api/src/test/java</directory>
 			<includes>
 				<include>**/*.java</include>
+				<include>**/*.fake</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true">
@@ -294,6 +310,7 @@
 			<directory>__systemIdentifier__-representation-impl/src/main/java</directory>
 			<includes>
 				<include>**/*.java</include>
+				<include>**/*.fake</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true">
@@ -306,6 +323,7 @@
 			<directory>__systemIdentifier__-representation-impl/src/test/java</directory>
 			<includes>
 				<include>**/*.java</include>
+				<include>**/*.fake</include>
 			</includes>
 		</fileSet>	
 		<fileSet filtered="true">

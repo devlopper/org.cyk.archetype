@@ -26,6 +26,11 @@
 			<artifactId>${systemIdentifier}-business-impl</artifactId>
 			<version>${version}</version>
 		</dependency>
+		
+		<dependency>
+			<groupId>org.wildfly.swarm</groupId>
+			<artifactId>jaxrs</artifactId>
+		</dependency>
 	</dependencies>		
 
 </project>

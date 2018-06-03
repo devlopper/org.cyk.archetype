@@ -17,7 +17,7 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>org.cyk.system.${systemIdentifier}</groupId>
+			<groupId>org.cyk.system.${systemIdentifier}.representation</groupId>
 			<artifactId>${systemIdentifier}-representation-entities</artifactId>
 			<version>${version}</version>
 		</dependency>

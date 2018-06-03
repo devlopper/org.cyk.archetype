@@ -12,12 +12,12 @@
 	<name>Business Entities</name>
 	
 	<groupId>org.cyk.system.${systemIdentifier}.business</groupId>
-	<artifactId>${systemIdentifier}-business-api</artifactId>
+	<artifactId>${systemIdentifier}-business-entities</artifactId>
 	<packaging>jar</packaging>
 	
 	<dependencies>
 		<dependency>
-			<groupId>org.cyk.system.${systemIdentifier}</groupId>
+			<groupId>org.cyk.system.${systemIdentifier}.persistence</groupId>
 			<artifactId>${systemIdentifier}-persistence-entities</artifactId>
 			<version>${version}</version>
 		</dependency>

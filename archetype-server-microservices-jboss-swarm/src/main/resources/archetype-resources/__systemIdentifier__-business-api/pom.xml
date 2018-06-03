@@ -17,7 +17,7 @@
 	
 	<dependencies>
 		<dependency>
-			<groupId>org.cyk.system.${systemIdentifier}</groupId>
+			<groupId>org.cyk.system.${systemIdentifier}.business</groupId>
 			<artifactId>${systemIdentifier}-business-entities</artifactId>
 			<version>${version}</version>
 		</dependency>
