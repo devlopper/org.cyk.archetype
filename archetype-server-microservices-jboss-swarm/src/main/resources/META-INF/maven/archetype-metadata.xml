@@ -23,33 +23,33 @@
 		
 		<!-- persistence entities -->
 		<fileSet filtered="true">
-			<directory>__systemIdentifier__-persistence-entities</directory>
+			<directory>__systemIdentifier__-server-persistence-entities</directory>
 			<includes>
 				<include>pom.xml</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true" packaged="true">
-			<directory>__systemIdentifier__-persistence-entities/src/main/java</directory>
+			<directory>__systemIdentifier__-server-persistence-entities/src/main/java</directory>
 			<includes>
 				<include>**/*.java</include>
 				<include>**/*.fake</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true">
-			<directory>__systemIdentifier__-persistence-entities/src/main/resources</directory>
+			<directory>__systemIdentifier__-server-persistence-entities/src/main/resources</directory>
 			<includes>
 				<include>**/*.*</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true" packaged="true">
-			<directory>__systemIdentifier__-persistence-entities/src/test/java</directory>
+			<directory>__systemIdentifier__-server-persistence-entities/src/test/java</directory>
 			<includes>
 				<include>**/*.java</include>
 				<include>**/*.fake</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true">
-			<directory>__systemIdentifier__-persistence-entities/src/test/resources</directory>
+			<directory>__systemIdentifier__-server-persistence-entities/src/test/resources</directory>
 			<includes>
 				<include>**/*.*</include>
 			</includes>
@@ -57,33 +57,33 @@
 		
 		<!-- persistence-api -->
 		<fileSet filtered="true">
-			<directory>__systemIdentifier__-persistence-api</directory>
+			<directory>__systemIdentifier__-server-persistence-api</directory>
 			<includes>
 				<include>pom.xml</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true" packaged="true">
-			<directory>__systemIdentifier__-persistence-api/src/main/java</directory>
+			<directory>__systemIdentifier__-server-persistence-api/src/main/java</directory>
 			<includes>
 				<include>**/*.java</include>
 				<include>**/*.fake</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true">
-			<directory>__systemIdentifier__-persistence-api/src/main/resources</directory>
+			<directory>__systemIdentifier__-server-persistence-api/src/main/resources</directory>
 			<includes>
 				<include>**/*.*</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true" packaged="true">
-			<directory>__systemIdentifier__-persistence-api/src/test/java</directory>
+			<directory>__systemIdentifier__-server-persistence-api/src/test/java</directory>
 			<includes>
 				<include>**/*.java</include>
 				<include>**/*.fake</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true">
-			<directory>__systemIdentifier__-persistence-api/src/test/resources</directory>
+			<directory>__systemIdentifier__-server-persistence-api/src/test/resources</directory>
 			<includes>
 				<include>**/*.*</include>
 			</includes>
@@ -91,33 +91,33 @@
 		
 		<!-- persistence-impl -->
 		<fileSet filtered="true">
-			<directory>__systemIdentifier__-persistence-impl</directory>
+			<directory>__systemIdentifier__-server-persistence-impl</directory>
 			<includes>
 				<include>pom.xml</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true" packaged="true">
-			<directory>__systemIdentifier__-persistence-impl/src/main/java</directory>
+			<directory>__systemIdentifier__-server-persistence-impl/src/main/java</directory>
 			<includes>
 				<include>**/*.java</include>
 				<include>**/*.fake</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true">
-			<directory>__systemIdentifier__-persistence-impl/src/main/resources</directory>
+			<directory>__systemIdentifier__-server-persistence-impl/src/main/resources</directory>
 			<includes>
 				<include>**/*.*</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true" packaged="true">
-			<directory>__systemIdentifier__-persistence-impl/src/test/java</directory>
+			<directory>__systemIdentifier__-server-persistence-impl/src/test/java</directory>
 			<includes>
 				<include>**/*.java</include>
 				<include>**/*.fake</include>
 			</includes>
 		</fileSet>	
 		<fileSet filtered="true">
-			<directory>__systemIdentifier__-persistence-impl/src/test/resources</directory>
+			<directory>__systemIdentifier__-server-persistence-impl/src/test/resources</directory>
 			<includes>
 				<include>**/*.*</include>
 			</includes>
@@ -127,33 +127,33 @@
 		
 		<!-- business entities -->
 		<fileSet filtered="true">
-			<directory>__systemIdentifier__-business-entities</directory>
+			<directory>__systemIdentifier__-server-business-entities</directory>
 			<includes>
 				<include>pom.xml</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true" packaged="true">
-			<directory>__systemIdentifier__-business-entities/src/main/java</directory>
+			<directory>__systemIdentifier__-server-business-entities/src/main/java</directory>
 			<includes>
 				<include>**/*.java</include>
 				<include>**/*.fake</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true">
-			<directory>__systemIdentifier__-business-entities/src/main/resources</directory>
+			<directory>__systemIdentifier__-server-business-entities/src/main/resources</directory>
 			<includes>
 				<include>**/*.*</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true" packaged="true">
-			<directory>__systemIdentifier__-business-entities/src/test/java</directory>
+			<directory>__systemIdentifier__-server-business-entities/src/test/java</directory>
 			<includes>
 				<include>**/*.java</include>
 				<include>**/*.fake</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true">
-			<directory>__systemIdentifier__-business-entities/src/test/resources</directory>
+			<directory>__systemIdentifier__-server-business-entities/src/test/resources</directory>
 			<includes>
 				<include>**/*.*</include>
 			</includes>
@@ -161,34 +161,34 @@
 		
 		<!-- business-api -->
 		<fileSet filtered="true">
-			<directory>__systemIdentifier__-business-api</directory>
+			<directory>__systemIdentifier__-server-business-api</directory>
 			<includes>
 				<include>pom.xml</include>
 			</includes>
 		
 		</fileSet>
 		<fileSet filtered="true" packaged="true">
-			<directory>__systemIdentifier__-business-api/src/main/java</directory>
+			<directory>__systemIdentifier__-server-business-api/src/main/java</directory>
 			<includes>
 				<include>**/*.java</include>
 				<include>**/*.fake</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true">
-			<directory>__systemIdentifier__-business-api/src/main/resources</directory>
+			<directory>__systemIdentifier__-server-business-api/src/main/resources</directory>
 			<includes>
 				<include>**/*.*</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true" packaged="true">
-			<directory>__systemIdentifier__-business-api/src/test/java</directory>
+			<directory>__systemIdentifier__-server-business-api/src/test/java</directory>
 			<includes>
 				<include>**/*.java</include>
 				<include>**/*.fake</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true">
-			<directory>__systemIdentifier__-business-api/src/test/resources</directory>
+			<directory>__systemIdentifier__-server-business-api/src/test/resources</directory>
 			<includes>
 				<include>**/*.*</include>
 			</includes>
@@ -196,33 +196,33 @@
 		
 		<!-- business-impl -->
 		<fileSet filtered="true">
-			<directory>__systemIdentifier__-business-impl</directory>
+			<directory>__systemIdentifier__-server-business-impl</directory>
 			<includes>
 				<include>pom.xml</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true" packaged="true">
-			<directory>__systemIdentifier__-business-impl/src/main/java</directory>
+			<directory>__systemIdentifier__-server-business-impl/src/main/java</directory>
 			<includes>
 				<include>**/*.java</include>
 				<include>**/*.fake</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true">
-			<directory>__systemIdentifier__-business-impl/src/main/resources</directory>
+			<directory>__systemIdentifier__-server-business-impl/src/main/resources</directory>
 			<includes>
 				<include>**/*.*</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true" packaged="true">
-			<directory>__systemIdentifier__-business-impl/src/test/java</directory>
+			<directory>__systemIdentifier__-server-business-impl/src/test/java</directory>
 			<includes>
 				<include>**/*.java</include>
 				<include>**/*.fake</include>
 			</includes>
 		</fileSet>	
 		<fileSet filtered="true">
-			<directory>__systemIdentifier__-business-impl/src/test/resources</directory>
+			<directory>__systemIdentifier__-server-business-impl/src/test/resources</directory>
 			<includes>
 				<include>**/*.*</include>
 			</includes>
@@ -232,33 +232,33 @@
 		
 		<!-- representation entities -->
 		<fileSet filtered="true">
-			<directory>__systemIdentifier__-representation-entities</directory>
+			<directory>__systemIdentifier__-server-representation-entities</directory>
 			<includes>
 				<include>pom.xml</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true" packaged="true">
-			<directory>__systemIdentifier__-representation-entities/src/main/java</directory>
+			<directory>__systemIdentifier__-server-representation-entities/src/main/java</directory>
 			<includes>
 				<include>**/*.java</include>
 				<include>**/*.fake</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true">
-			<directory>__systemIdentifier__-representation-entities/src/main/resources</directory>
+			<directory>__systemIdentifier__-server-representation-entities/src/main/resources</directory>
 			<includes>
 				<include>**/*.*</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true" packaged="true">
-			<directory>__systemIdentifier__-representation-entities/src/test/java</directory>
+			<directory>__systemIdentifier__-server-representation-entities/src/test/java</directory>
 			<includes>
 				<include>**/*.java</include>
 				<include>**/*.fake</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true">
-			<directory>__systemIdentifier__-representation-entities/src/test/resources</directory>
+			<directory>__systemIdentifier__-server-representation-entities/src/test/resources</directory>
 			<includes>
 				<include>**/*.*</include>
 			</includes>
@@ -266,34 +266,32 @@
 		
 		<!-- representation-api -->
 		<fileSet filtered="true">
-			<directory>__systemIdentifier__-representation-api</directory>
+			<directory>__systemIdentifier__-server-representation-api</directory>
 			<includes>
 				<include>pom.xml</include>
 			</includes>
-		
 		</fileSet>
 		<fileSet filtered="true" packaged="true">
-			<directory>__systemIdentifier__-representation-api/src/main/java</directory>
+			<directory>__systemIdentifier__-server-representation-api/src/main/java</directory>
 			<includes>
 				<include>**/*.java</include>
-				
 			</includes>
 		</fileSet>
 		<fileSet filtered="true">
-			<directory>__systemIdentifier__-representation-api/src/main/resources</directory>
+			<directory>__systemIdentifier__-server-representation-api/src/main/resources</directory>
 			<includes>
 				<include>**/*.*</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true" packaged="true">
-			<directory>__systemIdentifier__-representation-api/src/test/java</directory>
+			<directory>__systemIdentifier__-server-representation-api/src/test/java</directory>
 			<includes>
 				<include>**/*.java</include>
 				<include>**/*.fake</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true">
-			<directory>__systemIdentifier__-representation-api/src/test/resources</directory>
+			<directory>__systemIdentifier__-server-representation-api/src/test/resources</directory>
 			<includes>
 				<include>**/*.*</include>
 			</includes>
@@ -301,33 +299,33 @@
 		
 		<!-- representation-impl --> 
 		<fileSet filtered="true">
-			<directory>__systemIdentifier__-representation-impl</directory>
+			<directory>__systemIdentifier__-server-representation-impl</directory>
 			<includes>
 				<include>pom.xml</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true" packaged="true">
-			<directory>__systemIdentifier__-representation-impl/src/main/java</directory>
+			<directory>__systemIdentifier__-server-representation-impl/src/main/java</directory>
 			<includes>
 				<include>**/*.java</include>
 				<include>**/*.fake</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true">
-			<directory>__systemIdentifier__-representation-impl/src/main/resources</directory>
+			<directory>__systemIdentifier__-server-representation-impl/src/main/resources</directory>
 			<includes>
 				<include>**/*.*</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true" packaged="true">
-			<directory>__systemIdentifier__-representation-impl/src/test/java</directory>
+			<directory>__systemIdentifier__-server-representation-impl/src/test/java</directory>
 			<includes>
 				<include>**/*.java</include>
 				<include>**/*.fake</include>
 			</includes>
 		</fileSet>	
 		<fileSet filtered="true">
-			<directory>__systemIdentifier__-representation-impl/src/test/resources</directory>
+			<directory>__systemIdentifier__-server-representation-impl/src/test/resources</directory>
 			<includes>
 				<include>**/*.*</include>
 			</includes>

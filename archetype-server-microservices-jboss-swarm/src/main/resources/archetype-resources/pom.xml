@@ -8,29 +8,30 @@
 		<version>pom.jee.server.jboss.0.0.1</version>
 	</parent>
 
-	<groupId>org.cyk.system.${systemIdentifier}</groupId>
-	<artifactId>${systemIdentifier}-_pom</artifactId>
+	<groupId>${package}.${systemIdentifier}.server</groupId>
+	<artifactId>${systemIdentifier}-server-_pom</artifactId>
 	<version>${version}</version>
 	<packaging>pom</packaging>
 
-	<name>${systemIdentifier} management system</name>
+	<name>${systemIdentifier} system server</name>
 	<url>http://www.cykcorp.org</url>
 	
 	<modules>
 		<!-- Persistence Layer -->
-		<module>../${systemIdentifier}-persistence-entities</module>
-		<module>../${systemIdentifier}-persistence-api</module>
-		<module>../${systemIdentifier}-persistence-impl</module>
+		<module>../${systemIdentifier}-server-persistence-entities</module>
+		<module>../${systemIdentifier}-server-persistence-api</module>
+		<module>../${systemIdentifier}-server-persistence-impl</module>
 		
 		<!-- Business Layer -->
-		<module>../${systemIdentifier}-business-entities</module>
-		<module>../${systemIdentifier}-business-api</module>
-		<module>../${systemIdentifier}-business-impl</module>
+		<module>../${systemIdentifier}-server-business-entities</module>
+		<module>../${systemIdentifier}-server-business-api</module>
+		<module>../${systemIdentifier}-server-business-impl</module>
 		
 		<!-- Representation Layer -->
-		<module>../${systemIdentifier}-representation-entities</module>
-		<module>../${systemIdentifier}-representation-api</module>
-		<module>../${systemIdentifier}-representation-impl</module>
+		<module>../${systemIdentifier}-server-representation-entities</module>
+		<module>../${systemIdentifier}-server-representation-api</module>
+		<module>../${systemIdentifier}-server-representation-impl</module>
+		
 	</modules>
 
 </project>

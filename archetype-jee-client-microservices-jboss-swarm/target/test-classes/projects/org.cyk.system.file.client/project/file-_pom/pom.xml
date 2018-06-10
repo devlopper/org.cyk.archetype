@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>org.cyk.pom.jee.client.jboss.swarm</groupId>
+		<artifactId>pom-jee-client-jboss-swarm</artifactId>
+		<version>pom.jee.client.jboss.swarm.0.0.1</version>
+	</parent>
+
+	<groupId>org.cyk.system.file.client</groupId>
+	<artifactId>file-client-_pom</artifactId>
+	<version>0.0.1</version>
+	<packaging>pom</packaging>
+
+	<name>file system client</name>
+	<url>http://www.cykcorp.org</url>
+	
+	<modules>
+		<!-- Controller Layer -->
+		<module>../file-client-controller-entities</module>
+		<module>../file-client-controller-api</module>
+		<module>../file-client-controller-impl</module>
+		
+		<!-- Application Layer -->
+		<module>../file-client-application-web</module>
+		
+		
+	</modules>
+
+</project>
