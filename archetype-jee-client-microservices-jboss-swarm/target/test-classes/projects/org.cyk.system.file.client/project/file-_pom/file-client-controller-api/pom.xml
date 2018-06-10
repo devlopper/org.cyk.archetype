@@ -16,7 +16,7 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>org.cyk.system.file.client.controller</groupId>
+			<groupId>org.cyk.system.file.client.controller.entities</groupId>
 			<artifactId>file-client-controller-entities</artifactId>
 			<version>0.0.1</version>
 		</dependency>

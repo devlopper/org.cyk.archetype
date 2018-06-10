@@ -16,7 +16,7 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>${package}.${systemIdentifier}.client.controller</groupId>
+			<groupId>${package}.${systemIdentifier}.client.controller.api</groupId>
 			<artifactId>${systemIdentifier}-client-controller-api</artifactId>
 			<version>${version}</version>
 		</dependency>

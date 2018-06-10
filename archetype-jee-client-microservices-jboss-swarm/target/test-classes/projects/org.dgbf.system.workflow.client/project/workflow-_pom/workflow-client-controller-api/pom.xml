@@ -16,7 +16,7 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>org.dgbf.system.workflow.client.controller</groupId>
+			<groupId>org.dgbf.system.workflow.client.controller.entities</groupId>
 			<artifactId>workflow-client-controller-entities</artifactId>
 			<version>0.0.1</version>
 		</dependency>
