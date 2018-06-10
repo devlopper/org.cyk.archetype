@@ -23,7 +23,7 @@
 		<module>../workflow-client-controller-impl</module>
 		
 		<!-- Application Layer -->
-		<module>../workflow-client-application-web</module>
+		<module>../workflow-client-application</module>
 		
 		
 	</modules>

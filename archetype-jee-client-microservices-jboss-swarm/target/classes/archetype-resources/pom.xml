@@ -23,7 +23,7 @@
 		<module>../${systemIdentifier}-client-controller-impl</module>
 		
 		<!-- Application Layer -->
-		<module>../${systemIdentifier}-client-application-web</module>
+		<module>../${systemIdentifier}-client-application</module>
 		
 		
 	</modules>

@@ -23,7 +23,7 @@
 		<module>../mysysid-client-controller-impl</module>
 		
 		<!-- Application Layer -->
-		<module>../mysysid-client-application-web</module>
+		<module>../mysysid-client-application</module>
 		
 		
 	</modules>

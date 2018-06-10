@@ -23,7 +23,7 @@
 		<module>../file-client-controller-impl</module>
 		
 		<!-- Application Layer -->
-		<module>../file-client-application-web</module>
+		<module>../file-client-application</module>
 		
 		
 	</modules>
