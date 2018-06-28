@@ -275,6 +275,7 @@
 			<directory>__systemIdentifier__-server-representation-api/src/main/java</directory>
 			<includes>
 				<include>**/*.java</include>
+				<include>**/*.fake</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true">
