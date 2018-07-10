@@ -14,4 +14,19 @@
 	<artifactId>${systemIdentifier}-server-persistence-entities</artifactId>
 	<packaging>jar</packaging>
 	
+	<dependencies>
+		<dependency>
+			<groupId>org.cyk.jee.utility.server.persistence</groupId>
+			<artifactId>jee-utility-server-persistence</artifactId>
+			<version>0.0.1</version>
+		</dependency>
+	</dependencies>
+	
+	<repositories>
+	    <repository>
+	        <id>cyk</id>
+	        <url>https://rawgit.com/devlopper/artifact.maven/master</url>
+	    </repository>
+	</repositories>
+	
 </project>
