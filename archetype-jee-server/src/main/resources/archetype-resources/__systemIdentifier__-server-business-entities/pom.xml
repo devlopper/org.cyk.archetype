@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<name>Business Entities</name>
+
+	<parent>
+		<groupId>${package}.${systemIdentifier}.server</groupId>
+		<artifactId>${systemIdentifier}-server-_pom</artifactId>
+		<version>${version}</version>
+	</parent>
+
+	<groupId>${package}.${systemIdentifier}.server.business</groupId>
+	<artifactId>${systemIdentifier}-server-business-entities</artifactId>
+	<packaging>jar</packaging>
+	
+	<dependencies>
+		<dependency>
+			<groupId>${package}.${systemIdentifier}.server.persistence</groupId>
+			<artifactId>${systemIdentifier}-server-persistence-entities</artifactId>
+			<version>${version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.cyk.jee.utility.server.business</groupId>
+			<artifactId>jee-utility-server-business</artifactId>
+			<version>0.0.1</version>
+		</dependency>
+	</dependencies>	
+
+</project>

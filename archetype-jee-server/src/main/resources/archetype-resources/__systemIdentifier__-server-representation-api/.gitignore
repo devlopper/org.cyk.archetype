@@ -1,0 +1,11 @@
+/bin
+
+/build
+/target
+
+/Workspaces
+
+/Users
+/.settings
+.project
+.classpath
