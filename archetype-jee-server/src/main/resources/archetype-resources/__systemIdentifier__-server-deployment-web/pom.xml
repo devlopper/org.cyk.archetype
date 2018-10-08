@@ -8,7 +8,7 @@
 		<version>${version}</version>
 	</parent>
 
-	<name>Representation Implementation based on JAXRS</name>
+	<name>Deployment Web</name>
 	
 	<groupId>${package}.${systemIdentifier}.server.deployment</groupId>
 	<artifactId>${systemIdentifier}-server-deployment-web</artifactId>

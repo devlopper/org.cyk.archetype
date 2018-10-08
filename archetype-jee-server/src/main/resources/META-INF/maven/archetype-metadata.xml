@@ -8,7 +8,7 @@
   	<requiredProperty key="groupId"><defaultValue>none</defaultValue></requiredProperty>
   	<requiredProperty key="artifactId"><defaultValue>pom</defaultValue></requiredProperty>
   	<requiredProperty key="version"><defaultValue>0.0.1</defaultValue></requiredProperty>
-  	<requiredProperty key="package"><defaultValue>org.cyk.system</defaultValue></requiredProperty>
+  	<requiredProperty key="package"><defaultValue>ci.gouv.dgbf.system</defaultValue></requiredProperty>
   </requiredProperties>
 
 	<fileSets>
