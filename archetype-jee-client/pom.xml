@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>org.cyk.pom.maven</groupId>
+		<artifactId>maven-archetype</artifactId>
+		<version>pom.maven.archetype.0.0.1</version>
+	</parent>
+
+	<groupId>org.cyk.archetype</groupId>
+	<artifactId>archetype-jee-client</artifactId>
+	<version>0.0.1</version>
+	<packaging>maven-archetype</packaging>
+
+	<name>jee client project</name>
+	<url>http://www.cykcorp.org</url>
+
+</project>

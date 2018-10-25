@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>${package}.${systemIdentifier}.client</groupId>
+		<artifactId>${systemIdentifier}-client-_pom</artifactId>
+		<version>${version}</version>
+	</parent>
+
+	<name>Deployment Web</name>
+	
+	<properties>
+		<org.wildfly.plugins.wildfly-maven-plugin.version>1.2.2.Final</org.wildfly.plugins.wildfly-maven-plugin.version>
+	</properties>
+	
+	<groupId>${package}.${systemIdentifier}.client.deployment</groupId>
+	<artifactId>${systemIdentifier}-client-deployment-web</artifactId>
+	<packaging>war</packaging>
+
+	<dependencies>
+		<dependency>
+			<groupId>${package}.${systemIdentifier}.client.controller.impl</groupId>
+			<artifactId>${systemIdentifier}-client-controller-impl</artifactId>
+			<version>${version}</version>
+		</dependency>
+	</dependencies>		
+	
+	<build>
+        <plugins>
+            <plugin>
+                <groupId>org.wildfly.plugins</groupId>
+                <artifactId>wildfly-maven-plugin</artifactId>
+                <version>${org.wildfly.plugins.wildfly-maven-plugin.version}</version>
+            </plugin>
+        </plugins>
+    </build>
+	
+</project>
