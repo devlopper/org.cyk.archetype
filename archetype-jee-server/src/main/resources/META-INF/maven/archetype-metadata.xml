@@ -366,12 +366,29 @@
 			</includes>
 		</fileSet>	
 		<fileSet filtered="true">
+			<directory>__systemIdentifier__-server-deployment/src/main/java-templates</directory>
+			<includes>
+				<include>**/*.*</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true">
 			<directory>__systemIdentifier__-server-deployment/src/main/webapp</directory>
 			<includes>
 				<include>**/*.*</include>
 			</includes>
 		</fileSet>
-			
+		<fileSet filtered="true">
+			<directory>__systemIdentifier__-server-deployment/packaging</directory>
+			<includes>
+				<include>**/*.*</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true">
+			<directory>__systemIdentifier__-server-deployment/script</directory>
+			<includes>
+				<include>**/*.*</include>
+			</includes>
+		</fileSet>	
 	</fileSets>  
 	  
 </archetype-descriptor>

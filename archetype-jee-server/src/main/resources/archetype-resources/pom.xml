@@ -16,6 +16,12 @@
 	<name>${systemIdentifier} system server</name>
 	<url>http://www.cykcorp.org</url>
 	
+	<properties>
+		<data.source.name>${systemIdentifier}ServerDataSource</data.source.name>
+		<data.source.jndi.name>java:/${systemIdentifier}/server/dataSource</data.source.jndi.name>
+		<server.port.offset>1</server.port.offset>
+	</properties>
+	
 	<modules>
 		<!-- Persistence Layer -->
 		<module>../${systemIdentifier}-server-persistence-entities</module>
