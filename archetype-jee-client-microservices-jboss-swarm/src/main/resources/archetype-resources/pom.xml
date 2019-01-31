@@ -22,8 +22,8 @@
 		<module>../${systemIdentifier}-client-controller-api</module>
 		<module>../${systemIdentifier}-client-controller-impl</module>
 		
-		<!-- Application Layer -->
-		<module>../${systemIdentifier}-client-application</module>
+		<!-- Deployment -->
+		<module>../${systemIdentifier}-client-deployment</module>
 				
 	</modules>
 

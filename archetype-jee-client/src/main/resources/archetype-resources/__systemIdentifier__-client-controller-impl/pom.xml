@@ -20,12 +20,6 @@
 			<artifactId>${systemIdentifier}-client-controller-api</artifactId>
 			<version>${version}</version>
 		</dependency>
-		
-		<dependency>
-			<groupId>org.cyk.jee.utility.client.controller.web.jsf.primefaces</groupId>
-			<artifactId>jee-utility-client-controller-web-jsf-primefaces</artifactId>
-			<version>0.0.1</version>
-		</dependency>
 	</dependencies>		
 
 </project>

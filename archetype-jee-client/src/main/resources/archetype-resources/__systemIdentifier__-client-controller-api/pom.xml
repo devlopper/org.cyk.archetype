@@ -20,6 +20,12 @@
 			<artifactId>${systemIdentifier}-client-controller-entities</artifactId>
 			<version>${version}</version>
 		</dependency>
+		
+		<dependency>
+			<groupId>${package}.${systemIdentifier}.server.representation</groupId>
+			<artifactId>${systemIdentifier}-server-representation-api</artifactId>
+			<version>${version}</version>
+		</dependency>
 	</dependencies>		
 
 </project>

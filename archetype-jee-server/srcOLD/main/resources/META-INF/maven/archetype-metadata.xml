@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archetype-descriptor xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0 http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd" name="global-pom"
+    xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <requiredProperties>
+  	<requiredProperty key="systemIdentifier"/>
+  	<requiredProperty key="groupId"><defaultValue>none</defaultValue></requiredProperty>
+  	<requiredProperty key="artifactId"><defaultValue>pom</defaultValue></requiredProperty>
+  	<requiredProperty key="version"><defaultValue>0.0.1</defaultValue></requiredProperty>
+  	<requiredProperty key="package"><defaultValue>ci.gouv.dgbf.system</defaultValue></requiredProperty>
+  </requiredProperties>
+
+	<fileSets>
+		<fileSet filtered="true">
+			<directory></directory>
+			<includes>
+				<include>pom.xml</include>
+			</includes>
+		</fileSet>
+		
+		<!-- Persistence -->
+		
+		<!-- persistence entities -->
+		<fileSet filtered="true">
+			<directory>__systemIdentifier__-server-persistence-entities</directory>
+			<includes>
+				<include>pom.xml</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true" packaged="true">
+			<directory>__systemIdentifier__-server-persistence-entities/src/main/java</directory>
+			<includes>
+				<include>**/*.java</include>
+				<include>**/*.fake</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true">
+			<directory>__systemIdentifier__-server-persistence-entities/src/main/resources</directory>
+			<includes>
+				<include>**/*.*</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true" packaged="true">
+			<directory>__systemIdentifier__-server-persistence-entities/src/test/java</directory>
+			<includes>
+				<include>**/*.java</include>
+				<include>**/*.fake</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true">
+			<directory>__systemIdentifier__-server-persistence-entities/src/test/resources</directory>
+			<includes>
+				<include>**/*.*</include>
+			</includes>
+		</fileSet>
+		
+		<!-- persistence-api -->
+		<fileSet filtered="true">
+			<directory>__systemIdentifier__-server-persistence-api</directory>
+			<includes>
+				<include>pom.xml</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true" packaged="true">
+			<directory>__systemIdentifier__-server-persistence-api/src/main/java</directory>
+			<includes>
+				<include>**/*.java</include>
+				<include>**/*.fake</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true">
+			<directory>__systemIdentifier__-server-persistence-api/src/main/resources</directory>
+			<includes>
+				<include>**/*.*</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true" packaged="true">
+			<directory>__systemIdentifier__-server-persistence-api/src/test/java</directory>
+			<includes>
+				<include>**/*.java</include>
+				<include>**/*.fake</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true">
+			<directory>__systemIdentifier__-server-persistence-api/src/test/resources</directory>
+			<includes>
+				<include>**/*.*</include>
+			</includes>
+		</fileSet>
+		
+		<!-- persistence-impl -->
+		<fileSet filtered="true">
+			<directory>__systemIdentifier__-server-persistence-impl</directory>
+			<includes>
+				<include>pom.xml</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true" packaged="true">
+			<directory>__systemIdentifier__-server-persistence-impl/src/main/java</directory>
+			<includes>
+				<include>**/*.java</include>
+				<include>**/*.fake</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true">
+			<directory>__systemIdentifier__-server-persistence-impl/src/main/resources</directory>
+			<includes>
+				<include>**/*.*</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true" packaged="true">
+			<directory>__systemIdentifier__-server-persistence-impl/src/test/java</directory>
+			<includes>
+				<include>**/*.java</include>
+				<include>**/*.fake</include>
+			</includes>
+		</fileSet>	
+		<fileSet filtered="true">
+			<directory>__systemIdentifier__-server-persistence-impl/src/test/resources</directory>
+			<includes>
+				<include>**/*.*</include>
+			</includes>
+		</fileSet>	
+		
+		<!-- Business -->
+		
+		<!-- business entities -->
+		<fileSet filtered="true">
+			<directory>__systemIdentifier__-server-business-entities</directory>
+			<includes>
+				<include>pom.xml</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true" packaged="true">
+			<directory>__systemIdentifier__-server-business-entities/src/main/java</directory>
+			<includes>
+				<include>**/*.java</include>
+				<include>**/*.fake</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true">
+			<directory>__systemIdentifier__-server-business-entities/src/main/resources</directory>
+			<includes>
+				<include>**/*.*</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true" packaged="true">
+			<directory>__systemIdentifier__-server-business-entities/src/test/java</directory>
+			<includes>
+				<include>**/*.java</include>
+				<include>**/*.fake</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true">
+			<directory>__systemIdentifier__-server-business-entities/src/test/resources</directory>
+			<includes>
+				<include>**/*.*</include>
+			</includes>
+		</fileSet>
+		
+		<!-- business-api -->
+		<fileSet filtered="true">
+			<directory>__systemIdentifier__-server-business-api</directory>
+			<includes>
+				<include>pom.xml</include>
+			</includes>
+		
+		</fileSet>
+		<fileSet filtered="true" packaged="true">
+			<directory>__systemIdentifier__-server-business-api/src/main/java</directory>
+			<includes>
+				<include>**/*.java</include>
+				<include>**/*.fake</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true">
+			<directory>__systemIdentifier__-server-business-api/src/main/resources</directory>
+			<includes>
+				<include>**/*.*</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true" packaged="true">
+			<directory>__systemIdentifier__-server-business-api/src/test/java</directory>
+			<includes>
+				<include>**/*.java</include>
+				<include>**/*.fake</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true">
+			<directory>__systemIdentifier__-server-business-api/src/test/resources</directory>
+			<includes>
+				<include>**/*.*</include>
+			</includes>
+		</fileSet>
+		
+		<!-- business-impl -->
+		<fileSet filtered="true">
+			<directory>__systemIdentifier__-server-business-impl</directory>
+			<includes>
+				<include>pom.xml</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true" packaged="true">
+			<directory>__systemIdentifier__-server-business-impl/src/main/java</directory>
+			<includes>
+				<include>**/*.java</include>
+				<include>**/*.fake</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true">
+			<directory>__systemIdentifier__-server-business-impl/src/main/resources</directory>
+			<includes>
+				<include>**/*.*</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true" packaged="true">
+			<directory>__systemIdentifier__-server-business-impl/src/test/java</directory>
+			<includes>
+				<include>**/*.java</include>
+				<include>**/*.fake</include>
+			</includes>
+		</fileSet>	
+		<fileSet filtered="true">
+			<directory>__systemIdentifier__-server-business-impl/src/test/resources</directory>
+			<includes>
+				<include>**/*.*</include>
+			</includes>
+		</fileSet>	
+		
+		<!-- Representation -->
+		
+		<!-- representation entities -->
+		<fileSet filtered="true">
+			<directory>__systemIdentifier__-server-representation-entities</directory>
+			<includes>
+				<include>pom.xml</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true" packaged="true">
+			<directory>__systemIdentifier__-server-representation-entities/src/main/java</directory>
+			<includes>
+				<include>**/*.java</include>
+				<include>**/*.fake</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true">
+			<directory>__systemIdentifier__-server-representation-entities/src/main/resources</directory>
+			<includes>
+				<include>**/*.*</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true" packaged="true">
+			<directory>__systemIdentifier__-server-representation-entities/src/test/java</directory>
+			<includes>
+				<include>**/*.java</include>
+				<include>**/*.fake</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true">
+			<directory>__systemIdentifier__-server-representation-entities/src/test/resources</directory>
+			<includes>
+				<include>**/*.*</include>
+			</includes>
+		</fileSet>
+		
+		<!-- representation-api -->
+		<fileSet filtered="true">
+			<directory>__systemIdentifier__-server-representation-api</directory>
+			<includes>
+				<include>pom.xml</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true" packaged="true">
+			<directory>__systemIdentifier__-server-representation-api/src/main/java</directory>
+			<includes>
+				<include>**/*.java</include>
+				<include>**/*.fake</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true">
+			<directory>__systemIdentifier__-server-representation-api/src/main/resources</directory>
+			<includes>
+				<include>**/*.*</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true" packaged="true">
+			<directory>__systemIdentifier__-server-representation-api/src/test/java</directory>
+			<includes>
+				<include>**/*.java</include>
+				<include>**/*.fake</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true">
+			<directory>__systemIdentifier__-server-representation-api/src/test/resources</directory>
+			<includes>
+				<include>**/*.*</include>
+			</includes>
+		</fileSet>
+		
+		<!-- representation-impl --> 
+		<fileSet filtered="true">
+			<directory>__systemIdentifier__-server-representation-impl</directory>
+			<includes>
+				<include>pom.xml</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true" packaged="true">
+			<directory>__systemIdentifier__-server-representation-impl/src/main/java</directory>
+			<includes>
+				<include>**/*.java</include>
+				<include>**/*.fake</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true">
+			<directory>__systemIdentifier__-server-representation-impl/src/main/resources</directory>
+			<includes>
+				<include>**/*.*</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true" packaged="true">
+			<directory>__systemIdentifier__-server-representation-impl/src/test/java</directory>
+			<includes>
+				<include>**/*.java</include>
+				<include>**/*.fake</include>
+			</includes>
+		</fileSet>	
+		<fileSet filtered="true">
+			<directory>__systemIdentifier__-server-representation-impl/src/test/resources</directory>
+			<includes>
+				<include>**/*.*</include>
+			</includes>
+		</fileSet>	
+		
+		<!-- Deployment -->
+		<!-- Web -->
+		<fileSet filtered="true">
+			<directory>__systemIdentifier__-server-deployment-web</directory>
+			<includes>
+				<include>pom.xml</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true" packaged="true">
+			<directory>__systemIdentifier__-server-deployment-web/src/main/java</directory>
+			<includes>
+				<include>**/*.java</include>
+				<include>**/*.fake</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true">
+			<directory>__systemIdentifier__-server-deployment-web/src/main/resources</directory>
+			<includes>
+				<include>**/*.*</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true">
+			<directory>__systemIdentifier__-server-deployment-web/src/main/webapp</directory>
+			<includes>
+				<include>**/*.*</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true" packaged="true">
+			<directory>__systemIdentifier__-server-deployment-web/src/test/java</directory>
+			<includes>
+				<include>**/*.java</include>
+				<include>**/*.fake</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true">
+			<directory>__systemIdentifier__-server-deployment-web/src/test/resources</directory>
+			<includes>
+				<include>**/*.*</include>
+			</includes>
+		</fileSet>
+			
+	</fileSets>  
+	  
+</archetype-descriptor>

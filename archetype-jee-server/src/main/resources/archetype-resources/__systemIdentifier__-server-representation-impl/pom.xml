@@ -12,7 +12,7 @@
 	
 	<groupId>${package}.${systemIdentifier}.server.representation</groupId>
 	<artifactId>${systemIdentifier}-server-representation-impl</artifactId>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 
 	<dependencies>
 		<dependency>
@@ -20,34 +20,11 @@
 			<artifactId>${systemIdentifier}-server-representation-api</artifactId>
 			<version>${version}</version>
 		</dependency>
-		
 		<dependency>
 			<groupId>${package}.${systemIdentifier}.server.business</groupId>
 			<artifactId>${systemIdentifier}-server-business-impl</artifactId>
 			<version>${version}</version>
 		</dependency>
-		
-		<dependency>
-			<groupId>org.cyk.jee.utility.server.representation.impl</groupId>
-			<artifactId>jee-utility-server-representation-impl</artifactId>
-			<version>0.0.1</version>
-		</dependency>
 	</dependencies>		
-	
-	<profiles>
-		<profile>
-			<id>org.cyk.test</id>
-			<properties>
-				<org.cyk.test.classes>${package}.${systemIdentifier}.server.representation.impl.integration.DataSourceDefinition</org.cyk.test.classes>
-			</properties>
-			<dependencies>
-				<dependency>
-					<groupId>com.h2database</groupId>
-					<artifactId>h2</artifactId>
-					<version>1.4.197</version>
-				</dependency>
-			</dependencies>
-		</profile>
-	</profiles>	
-	
+
 </project>

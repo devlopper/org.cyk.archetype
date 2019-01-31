@@ -20,12 +20,6 @@
 			<artifactId>${systemIdentifier}-server-persistence-entities</artifactId>
 			<version>${version}</version>
 		</dependency>
-		
-		<dependency>
-			<groupId>org.cyk.jee.utility.server.business</groupId>
-			<artifactId>jee-utility-server-business</artifactId>
-			<version>0.0.1</version>
-		</dependency>
 	</dependencies>	
 
 </project>

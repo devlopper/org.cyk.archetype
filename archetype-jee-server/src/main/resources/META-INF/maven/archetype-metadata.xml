@@ -8,7 +8,7 @@
   	<requiredProperty key="groupId"><defaultValue>none</defaultValue></requiredProperty>
   	<requiredProperty key="artifactId"><defaultValue>pom</defaultValue></requiredProperty>
   	<requiredProperty key="version"><defaultValue>0.0.1</defaultValue></requiredProperty>
-  	<requiredProperty key="package"><defaultValue>ci.gouv.dgbf.system</defaultValue></requiredProperty>
+  	<requiredProperty key="package"><defaultValue>org.cyk.system</defaultValue></requiredProperty>
   </requiredProperties>
 
 	<fileSets>
@@ -332,42 +332,41 @@
 			</includes>
 		</fileSet>	
 		
-		<!-- Deployment -->
-		<!-- Web -->
+		<!-- deployment --> 
 		<fileSet filtered="true">
-			<directory>__systemIdentifier__-server-deployment-web</directory>
+			<directory>__systemIdentifier__-server-deployment</directory>
 			<includes>
 				<include>pom.xml</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true" packaged="true">
-			<directory>__systemIdentifier__-server-deployment-web/src/main/java</directory>
+			<directory>__systemIdentifier__-server-deployment/src/main/java</directory>
 			<includes>
 				<include>**/*.java</include>
 				<include>**/*.fake</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true">
-			<directory>__systemIdentifier__-server-deployment-web/src/main/resources</directory>
-			<includes>
-				<include>**/*.*</include>
-			</includes>
-		</fileSet>
-		<fileSet filtered="true">
-			<directory>__systemIdentifier__-server-deployment-web/src/main/webapp</directory>
+			<directory>__systemIdentifier__-server-deployment/src/main/resources</directory>
 			<includes>
 				<include>**/*.*</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true" packaged="true">
-			<directory>__systemIdentifier__-server-deployment-web/src/test/java</directory>
+			<directory>__systemIdentifier__-server-deployment/src/test/java</directory>
 			<includes>
 				<include>**/*.java</include>
 				<include>**/*.fake</include>
 			</includes>
-		</fileSet>
+		</fileSet>	
 		<fileSet filtered="true">
-			<directory>__systemIdentifier__-server-deployment-web/src/test/resources</directory>
+			<directory>__systemIdentifier__-server-deployment/src/test/resources</directory>
+			<includes>
+				<include>**/*.*</include>
+			</includes>
+		</fileSet>	
+		<fileSet filtered="true">
+			<directory>__systemIdentifier__-server-deployment/src/main/webapp</directory>
 			<includes>
 				<include>**/*.*</include>
 			</includes>

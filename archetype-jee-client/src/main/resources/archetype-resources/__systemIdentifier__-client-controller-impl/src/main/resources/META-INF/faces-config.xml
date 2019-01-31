@@ -8,9 +8,9 @@
 	<navigation-rule>
 		<from-view-id>*</from-view-id>
 		
-		<!-- Role -->
+		<!-- xxx -->
 		<!--navigation-case>
-			<from-outcome></from-outcome>
+			<from-outcome>xxxView</from-outcome>
 			<to-view-id></to-view-id>
 			<redirect />
 		</navigation-case-->
