@@ -331,6 +331,46 @@
 				<include>**/*.*</include>
 			</includes>
 		</fileSet>	
+		
+		<!-- deployment --> 
+		<fileSet filtered="true">
+			<directory>__systemIdentifier__-server-deployment</directory>
+			<includes>
+				<include>pom.xml</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true" packaged="true">
+			<directory>__systemIdentifier__-server-deployment/src/main/java</directory>
+			<includes>
+				<include>**/*.java</include>
+				<include>**/*.fake</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true">
+			<directory>__systemIdentifier__-server-deployment/src/main/resources</directory>
+			<includes>
+				<include>**/*.*</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true" packaged="true">
+			<directory>__systemIdentifier__-server-deployment/src/test/java</directory>
+			<includes>
+				<include>**/*.java</include>
+				<include>**/*.fake</include>
+			</includes>
+		</fileSet>	
+		<fileSet filtered="true">
+			<directory>__systemIdentifier__-server-deployment/src/test/resources</directory>
+			<includes>
+				<include>**/*.*</include>
+			</includes>
+		</fileSet>	
+		<fileSet filtered="true">
+			<directory>__systemIdentifier__-server-deployment/src/main/webapp</directory>
+			<includes>
+				<include>**/*.*</include>
+			</includes>
+		</fileSet>
 			
 	</fileSets>  
 	  

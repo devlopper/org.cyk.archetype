@@ -126,6 +126,7 @@
 		<!-- Application -->
 		
 		<!-- application -->
+		<!--
 		<fileSet filtered="true">
 			<directory>__systemIdentifier__-client-application</directory>
 			<includes>
@@ -160,6 +161,47 @@
 		</fileSet>
 		<fileSet filtered="true">
 			<directory>__systemIdentifier__-client-application/webapp</directory>
+			<includes>
+				<include>**/*.*</include>
+			</includes>
+		</fileSet>
+		-->
+		
+		<!-- deployment -->
+		<fileSet filtered="true">
+			<directory>__systemIdentifier__-client-deployment</directory>
+			<includes>
+				<include>pom.xml</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true" packaged="true">
+			<directory>__systemIdentifier__-client-deployment/src/main/java</directory>
+			<includes>
+				<include>**/*.java</include>
+				<include>**/*.fake</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true">
+			<directory>__systemIdentifier__-client-deployment/src/main/resources</directory>
+			<includes>
+				<include>**/*.*</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true" packaged="true">
+			<directory>__systemIdentifier__-client-deployment/src/test/java</directory>
+			<includes>
+				<include>**/*.java</include>
+				<include>**/*.fake</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true">
+			<directory>__systemIdentifier__-client-deployment/src/test/resources</directory>
+			<includes>
+				<include>**/*.*</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true">
+			<directory>__systemIdentifier__-client-deployment/src/main/webapp</directory>
 			<includes>
 				<include>**/*.*</include>
 			</includes>
