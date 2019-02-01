@@ -27,5 +27,11 @@
 			<version>${version}</version>
 		</dependency>
 	</dependencies>		
-
+	
+	<profiles>
+		<profile>
+			<id>org.cyk.test</id>
+		</profile>
+	</profiles>	
+	
 </project>
