@@ -365,7 +365,7 @@
 				<include>**/*.*</include>
 			</includes>
 		</fileSet>	
-		<fileSet filtered="true">
+		<fileSet filtered="true" packaged="true">
 			<directory>__systemIdentifier__-server-deployment/src/main/java-templates</directory>
 			<includes>
 				<include>**/*.*</include>
