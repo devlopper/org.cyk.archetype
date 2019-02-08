@@ -13,7 +13,11 @@
 	<groupId>${package}.${systemIdentifier}.client.deployment</groupId>
 	<artifactId>${systemIdentifier}-client-deployment</artifactId>
 	<packaging>war</packaging>
-
+	
+	<properties>
+		<microprofile.archive.name>${systemIdentifier}-client</microprofile.archive.name>
+	</properties>
+	
 	<dependencies>
 		<dependency>
 			<groupId>${package}.${systemIdentifier}.client.controller.impl</groupId>

@@ -13,7 +13,11 @@
 	<groupId>${package}.${systemIdentifier}.server.deployment</groupId>
 	<artifactId>${systemIdentifier}-server-deployment</artifactId>
 	<packaging>war</packaging>
-
+	
+	<properties>
+		<microprofile.archive.name>${systemIdentifier}-server</microprofile.archive.name>
+	</properties>
+	
 	<dependencies>
 		<dependency>
 			<groupId>${package}.${systemIdentifier}.server.representation</groupId>

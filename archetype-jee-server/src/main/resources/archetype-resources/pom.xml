@@ -20,6 +20,7 @@
 		<data.source.name>${systemIdentifier}ServerDataSource</data.source.name>
 		<data.source.jndi.name>java:/${systemIdentifier}/server/dataSource</data.source.jndi.name>
 		<server.port.offset>1</server.port.offset>
+		<hibernate.hbm2ddl.auto>update</hibernate.hbm2ddl.auto>
 	</properties>
 	
 	<modules>
