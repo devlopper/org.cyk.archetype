@@ -1,11 +1,37 @@
-/bin
+#java specific
+*.class
 
-/build
+#general swap/backup files
+*.so
+*.log
+*.out
+*~
+*.swp
+*.DS_Store
+*.lock
+
+#ant specific
+dist/
+build/
+
+# eclipse
 /target
 
-/Workspaces
-
-/Users
+/build
+/bin
 /.settings
-.project
 .classpath
+.project
+
+# IntelliJ jet brains
+/.idea
+*.iml
+
+# netbeans
+core
+nbproject/*
+!nbproject/project.properties
+!nbproject/project.xml
+
+#jrebel
+rebel.xml
