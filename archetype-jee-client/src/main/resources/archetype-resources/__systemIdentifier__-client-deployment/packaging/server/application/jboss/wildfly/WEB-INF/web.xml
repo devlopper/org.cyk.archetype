@@ -6,9 +6,16 @@
 	
 	<display-name>${systemIdentifier} Client</display-name>
 	
-	<context-param>  
-        <param-name>primefaces.THEME</param-name>  
-        <param-value>${primefaces.theme}</param-value>  
-    </context-param>
+	<context-param>
+		<description>The theme class</description>
+		<param-name>cyk.user.interface.theme.class.name</param-name>
+		<param-value>${web.context.parameter.theme.class.value}</param-value>
+	</context-param>
+	
+	<context-param>
+		<description>The theme identifier</description>
+		<param-name>${web.context.parameter.theme.identifier.name}</param-name>
+		<param-value>${web.context.parameter.theme.identifier.value}</param-value>
+	</context-param>
 		
 </web-app>
