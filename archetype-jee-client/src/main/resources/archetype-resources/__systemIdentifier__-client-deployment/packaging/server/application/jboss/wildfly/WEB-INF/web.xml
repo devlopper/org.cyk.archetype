@@ -17,5 +17,40 @@
 		<param-name>${web.context.parameter.theme.identifier.name}</param-name>
 		<param-value>${web.context.parameter.theme.identifier.value}</param-value>
 	</context-param>
+	
+	<context-param>
+		<param-name>web.context.parameter.theme.favicon.file.folder</param-name>
+		<param-value>${web.context.parameter.theme.favicon.file.folder}</param-value>
+	</context-param>
+	
+	<context-param>
+		<param-name>web.context.parameter.theme.favicon.file.name.prefix</param-name>
+		<param-value>${web.context.parameter.theme.favicon.file.name.prefix}</param-value>
+	</context-param>
+	
+	<context-param>
+		<param-name>web.context.parameter.theme.favicon.file.name.extension</param-name>
+		<param-value>${web.context.parameter.theme.favicon.file.name.extension}</param-value>
+	</context-param>
+	
+	<context-param>
+		<param-name>cyk.context.parameter.theme.logo.file.resources.folder</param-name>
+		<param-value>${cyk.context.parameter.theme.logo.file.resources.folder}</param-value>
+	</context-param>
+	
+	<context-param>
+		<param-name>cyk.context.parameter.theme.logo.file.folder</param-name>
+		<param-value>${cyk.context.parameter.theme.logo.file.folder}</param-value>
+	</context-param>
+	
+	<context-param>
+		<param-name>cyk.context.parameter.theme.logo.file.name.prefix</param-name>
+		<param-value>${cyk.context.parameter.theme.logo.file.name.prefix}</param-value>
+	</context-param>
+	
+	<context-param>
+		<param-name>cyk.context.parameter.theme.logo.file.name.extension</param-name>
+		<param-value>${cyk.context.parameter.theme.logo.file.name.extension}</param-value>
+	</context-param>
 		
 </web-app>
