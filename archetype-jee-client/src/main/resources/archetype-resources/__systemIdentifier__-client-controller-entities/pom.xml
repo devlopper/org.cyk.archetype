@@ -20,6 +20,12 @@
 			<artifactId>${systemIdentifier}-server-representation-entities</artifactId>
 			<version>${version}</version>
 		</dependency>
+		
+		<dependency>
+			<groupId>org.cyk.jee.utility.client.controller</groupId>
+			<artifactId>jee-utility-client-controller</artifactId>
+			<version>0.0.1</version>
+		</dependency>
 	</dependencies>		
 
 </project>

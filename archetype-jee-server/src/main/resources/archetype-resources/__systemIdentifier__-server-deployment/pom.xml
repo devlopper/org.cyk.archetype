@@ -24,6 +24,12 @@
 			<artifactId>${systemIdentifier}-server-representation-impl</artifactId>
 			<version>${version}</version>
 		</dependency>
+		
+		<dependency>
+			<groupId>org.cyk.jee.utility.server.deployment</groupId>
+			<artifactId>jee-utility-server-deployment</artifactId>
+			<version>0.0.1</version>
+		</dependency>
 	</dependencies>		
 
 </project>
