@@ -17,13 +17,9 @@ public class ServletContextListener extends AbstractServletContextListener imple
 	private static final long serialVersionUID = 1L;
 
 	@Override
-	protected void __listenContextInitialized__(ServletContextEvent servletContextEvent) {
+	public void __initialize__(ServletContext context) {
+		super.__initialize__(context);
 		__inject__(ApplicationScopeLifeCycleListener.class).initialize(null);
-	}
-	
-	@Override
-	protected void __listenContextDestroyed__(ServletContextEvent servletContextEvent) {
-		
 	}
 
 }

@@ -1,4 +1,4 @@
-package org.cyk.system.product.server.annotation;
+package ${package}.${systemIdentifier}.server.annotation;
 
 import javax.enterprise.util.AnnotationLiteral;
 
