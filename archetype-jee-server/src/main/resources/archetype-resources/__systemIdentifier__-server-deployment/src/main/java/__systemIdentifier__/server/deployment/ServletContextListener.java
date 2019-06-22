@@ -5,7 +5,7 @@ package ${package}.${systemIdentifier}.server.deployment;
 
 import java.io.Serializable;
 
-import javax.servlet.ServletContextEvent;
+import javax.servlet.ServletContext;
 import javax.servlet.annotation.WebListener;
 
 import org.cyk.utility.server.deployment.AbstractServletContextListener;
