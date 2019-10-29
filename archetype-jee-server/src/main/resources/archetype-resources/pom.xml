@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.cyk.pom.jee.server</groupId>
 		<artifactId>pom-jee-server</artifactId>
-		<version>pom.jee.server.0.0.1</version>
+		<version>pom.jee.server.0.1.0</version>
 	</parent>
 
 	<groupId>${package}.${systemIdentifier}.server</groupId>

@@ -16,6 +16,7 @@
 	
 	<properties>
 		<microprofile.archive.name>${systemIdentifier}-client</microprofile.archive.name>
+		<jboss-web.context-root>${systemIdentifier}/client</jboss-web.context-root>
 	</properties>
 	
 	<dependencies>

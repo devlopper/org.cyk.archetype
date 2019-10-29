@@ -8,7 +8,6 @@ import java.security.Principal;
 
 import org.cyk.utility.client.controller.component.menu.AbstractMenuBuilderMapGetterImpl;
 import org.cyk.utility.client.controller.component.menu.MenuBuilder;
-import org.cyk.utility.client.controller.component.menu.MenuItemBuilder;
 
 @${package}.${systemIdentifier}.server.annotation.System
 public class MenuBuilderMapGetterImpl extends AbstractMenuBuilderMapGetterImpl implements Serializable {

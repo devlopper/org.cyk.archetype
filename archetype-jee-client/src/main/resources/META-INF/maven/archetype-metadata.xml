@@ -7,7 +7,7 @@
   	<requiredProperty key="systemIdentifier"/>
   	<requiredProperty key="groupId"><defaultValue>none</defaultValue></requiredProperty>
   	<requiredProperty key="artifactId"><defaultValue>pom</defaultValue></requiredProperty>
-  	<requiredProperty key="version"><defaultValue>0.0.1</defaultValue></requiredProperty>
+  	<requiredProperty key="version"><defaultValue>0.1.0</defaultValue></requiredProperty>
   	<requiredProperty key="package"><defaultValue>org.cyk.system</defaultValue></requiredProperty>
   </requiredProperties>
 

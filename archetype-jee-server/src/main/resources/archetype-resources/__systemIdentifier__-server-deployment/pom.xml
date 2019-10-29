@@ -16,6 +16,8 @@
 	
 	<properties>
 		<microprofile.archive.name>${systemIdentifier}-server</microprofile.archive.name>
+		<jboss-web.context-root>${systemIdentifier}/server</jboss-web.context-root>
+		<web.context>/${jboss-web.context-root}</web.context>
 	</properties>
 	
 	<dependencies>
@@ -28,7 +30,7 @@
 		<dependency>
 			<groupId>org.cyk.jee.utility.server.deployment</groupId>
 			<artifactId>jee-utility-server-deployment</artifactId>
-			<version>0.0.1</version>
+			<version>0.1.0</version>
 		</dependency>
 	</dependencies>		
 
