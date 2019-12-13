@@ -25,6 +25,35 @@
 			<artifactId>${systemIdentifier}-client-controller-impl</artifactId>
 			<version>${version}</version>
 		</dependency>
-	</dependencies>		
+		
+		<dependency>
+			<groupId>org.cyk.jee.utility.client.deployment</groupId>
+			<artifactId>jee-utility-client-deployment</artifactId>
+			<version>0.1.0</version>
+		</dependency>
+	</dependencies>	
+	
+	<profiles>
+		<profile>
+			<id>deployment.common</id>
+			<properties>
+				<cyk.variable.system.name>${systemIdentifier}</cyk.variable.system.name>
+			</properties>
+		</profile>
+		
+		<profile>
+			<id>deployment.atlantis</id>
+			<properties>
+				<cyk.variable.user.interface.theme.primefaces>atlantis-blue</cyk.variable.user.interface.theme.primefaces>
+			</properties>
+		</profile>
+		
+		<profile>
+			<id>deployment.wildfly.local</id>
+			<properties>
+				<cyk.variable.system.proxy.uniform.resource.identifier>http://localhost:8080/${systemIdentifier}/server/api</cyk.variable.system.proxy.uniform.resource.identifier>
+			</properties>
+		</profile>
+	</profiles>	
 
 </project>

@@ -17,7 +17,7 @@ public class ApplicationScopeLifeCycleListener extends AbstractApplicationScopeL
 	@Override
 	public void __initialize__(Object object) {
 		__inject__(${package}.${systemIdentifier}.client.controller.api.ApplicationScopeLifeCycleListener.class).initialize(null);
-		__setQualifierClassTo__(${package}.${systemIdentifier}.server.annotation.System.class, MenuBuilderMapGetter.class);
+		__setQualifierClassTo__(${package}.${systemIdentifier}.server.annotation.System.class, MenuBuilderMapInstantiator.class);
 	}
 	
 	@Override
