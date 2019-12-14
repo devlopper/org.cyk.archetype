@@ -4,11 +4,12 @@
 package ${package}.${systemIdentifier}.client.controller.entities;
 
 import java.io.Serializable;
+import java.util.List;
 
 import javax.enterprise.context.ApplicationScoped;
 
+import org.cyk.utility.__kernel__.klass.PersistableClassesGetter;
 import org.cyk.utility.client.controller.AbstractApplicationScopeLifeCycleListenerEntities;
-import org.cyk.utility.system.node.SystemNodeClient;
 
 @ApplicationScoped
 public class ApplicationScopeLifeCycleListener extends AbstractApplicationScopeLifeCycleListenerEntities implements Serializable {
@@ -17,7 +18,7 @@ public class ApplicationScopeLifeCycleListener extends AbstractApplicationScopeL
 	@Override
 	public void __initialize__(Object object) {
 		super.__initialize__(object);
-		__inject__(SystemNodeClient.class).setName("${systemIdentifier} client");
+		PersistableClassesGetter.COLLECTION.set(List.of());
 	}
 	
 	@Override
