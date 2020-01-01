@@ -8,7 +8,7 @@ import java.io.Serializable;
 import javax.enterprise.context.ApplicationScoped;
 
 import org.cyk.utility.__kernel__.AbstractApplicationScopeLifeCycleListener;
-import org.cyk.utility.client.controller.component.menu.MenuBuilderMapGetter;
+import org.cyk.utility.client.controller.component.menu.MenuBuilderMapInstantiator;
 
 @ApplicationScoped
 public class ApplicationScopeLifeCycleListener extends AbstractApplicationScopeLifeCycleListener implements Serializable {
