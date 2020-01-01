@@ -1,4 +1,7 @@
-package org.cyk.system.sibua.server.representation.impl;
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+package ${package}.${systemIdentifier}.server.representation.impl;
 
 import java.io.Serializable;
 
@@ -6,7 +9,7 @@ import javax.ws.rs.core.Response;
 
 import org.cyk.utility.server.representation.AbstractDataLoaderImpl;
 
-@org.cyk.system.sibua.server.annotation.System
+@${package}.${systemIdentifier}.server.annotation.System
 public class DataLoaderImpl extends AbstractDataLoaderImpl implements Serializable {
 	private static final long serialVersionUID = 1L;
 
