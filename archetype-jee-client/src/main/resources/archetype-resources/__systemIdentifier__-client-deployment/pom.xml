@@ -15,6 +15,7 @@
 	<packaging>war</packaging>
 	
 	<properties>
+		<deployment.standalone.port.offset>0</deployment.standalone.port.offset>
 		<microprofile.archive.name>${systemIdentifier}-client</microprofile.archive.name>
 		<jboss-web.context-root>${systemIdentifier}/client</jboss-web.context-root>
 	</properties>
@@ -35,25 +36,50 @@
 	
 	<profiles>
 		<profile>
-			<id>deployment.common</id>
+			<id>common</id>
 			<properties>
 				<cyk.variable.system.name>${systemIdentifier}</cyk.variable.system.name>
+				<cyk.variable.system.logging.throwable.print.stack.trace>true</cyk.variable.system.logging.throwable.print.stack.trace>
 			</properties>
 		</profile>
 		
+		<!-- Theme -->
+		
 		<profile>
-			<id>deployment.atlantis</id>
+			<id>atlantis</id>
 			<properties>
 				<cyk.variable.user.interface.theme.primefaces>atlantis-blue</cyk.variable.user.interface.theme.primefaces>
 			</properties>
 		</profile>
 		
+		<!-- Application Server -->
+		
 		<profile>
-			<id>deployment.wildfly.local</id>
+			<id>wildfly.dev</id>
 			<properties>
 				<cyk.variable.system.proxy.uniform.resource.identifier>http://localhost:8080/${systemIdentifier}/server/api</cyk.variable.system.proxy.uniform.resource.identifier>
 			</properties>
 		</profile>
+		
+		<profile>
+			<id>wildfly.test</id>
+			<properties>
+				<cyk.variable.system.proxy.uniform.resource.identifier>http://xx.xx.xx.xx:pppp/${systemIdentifier}/server/api</cyk.variable.system.proxy.uniform.resource.identifier>
+				<wildfly.hostname>xx.xx.xx.xx</wildfly.hostname>
+				<wildfly.username>user</wildfly.username>
+				<wildfly.password>pass</wildfly.password>
+			</properties>
+		</profile>
+		
+		<profile>
+			<id>wildfly.prod</id>
+			<properties>
+				<cyk.variable.system.proxy.uniform.resource.identifier>http://xx.xx.xx.xx:pppp/${systemIdentifier}/server/api</cyk.variable.system.proxy.uniform.resource.identifier>
+				<wildfly.hostname>xx.xx.xx.xx</wildfly.hostname>
+				<wildfly.username>user</wildfly.username>
+				<wildfly.password>pass</wildfly.password>
+			</properties>
+		</profile>
+		
 	</profiles>	
-
 </project>

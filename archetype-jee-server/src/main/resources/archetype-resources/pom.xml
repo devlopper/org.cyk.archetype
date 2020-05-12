@@ -19,7 +19,6 @@
 	<properties>
 		<data.source.name>${systemIdentifier}ServerDataSource</data.source.name>
 		<data.source.jndi.name>java:/${systemIdentifier}/server/dataSource</data.source.jndi.name>
-		<server.port.offset>0</server.port.offset>
 		<hibernate.hbm2ddl.auto>validate</hibernate.hbm2ddl.auto>
 	</properties>
 	

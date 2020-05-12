@@ -17,7 +17,7 @@
 	<url>http://www.cykcorp.org</url>
 	
 	<properties>
-		<server.port.offset>0</server.port.offset>
+		
 	</properties>
 	
 	<modules>

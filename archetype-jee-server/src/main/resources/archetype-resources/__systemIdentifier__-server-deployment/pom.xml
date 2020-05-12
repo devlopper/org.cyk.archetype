@@ -15,6 +15,7 @@
 	<packaging>war</packaging>
 	
 	<properties>
+		<deployment.standalone.port.offset>0</deployment.standalone.port.offset>
 		<microprofile.archive.name>${systemIdentifier}-server</microprofile.archive.name>
 		<jboss-web.context-root>${systemIdentifier}/server</jboss-web.context-root>
 		<web.context>/${jboss-web.context-root}</web.context>
@@ -33,5 +34,77 @@
 			<version>0.1.0</version>
 		</dependency>
 	</dependencies>		
-
+	
+	<profiles>
+		<profile>
+			<id>common</id>
+			<properties>
+				<cyk.variable.system.name>${systemIdentifier}</cyk.variable.system.name>
+				<cyk.variable.system.version>0.1</cyk.variable.system.version>
+				<cyk.variable.system.logging.throwable.print.stack.trace>true</cyk.variable.system.logging.throwable.print.stack.trace>
+			</properties>
+		</profile>
+		
+		<!-- Application Server -->
+		
+		<profile>
+			<id>wildfly.dev</id>
+			<properties>
+				<cyk.variable.system.host>localhost</cyk.variable.system.host>
+			</properties>
+		</profile>
+		
+		<profile>
+			<id>wildfly.test</id>
+			<properties>
+				<wildfly.hostname>xx.xx.xx.xx</wildfly.hostname>
+				<wildfly.username>user</wildfly.username>
+				<wildfly.password>pass</wildfly.password>
+				<cyk.variable.system.host>xx.xx.xx.xx</cyk.variable.system.host>
+			</properties>
+		</profile>
+		
+		<profile>
+			<id>wildfly.prod</id>
+			<properties>
+				<wildfly.hostname>xx.xx.xx.xx</wildfly.hostname>
+				<wildfly.username>user</wildfly.username>
+				<wildfly.password>pass</wildfly.password>
+				<cyk.variable.system.host>xx.xx.xx.xx</cyk.variable.system.host>
+			</properties>
+		</profile>
+		
+		<!-- Data Source -->
+		
+		<profile>
+			<id>oracle.dev</id>
+			<properties>
+				<data.base.management.system.host>localhost</data.base.management.system.host>
+				<data.base.management.system.sid>sid</data.base.management.system.sid>
+				<data.source.user>user</data.source.user>
+				<data.source.password>pass</data.source.password>
+			</properties>
+		</profile>
+		
+		<profile>
+			<id>oracle.test</id>
+			<properties>
+				<data.base.management.system.host>xx.xx.xx.xx</data.base.management.system.host>
+				<data.base.management.system.sid>sid</data.base.management.system.sid>
+				<data.source.user>user</data.source.user>
+				<data.source.password>pass</data.source.password>
+			</properties>
+		</profile>
+		
+		<profile>
+			<id>oracle.prod</id>
+			<properties>
+				<data.base.management.system.host>xx.xx.xx.xx</data.base.management.system.host>
+				<data.base.management.system.sid>sid</data.base.management.system.sid>
+				<data.source.user>user</data.source.user>
+				<data.source.password>pass</data.source.password>
+			</properties>
+		</profile>
+	</profiles>
+	
 </project>
