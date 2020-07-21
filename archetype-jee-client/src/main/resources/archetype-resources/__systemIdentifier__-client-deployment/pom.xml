@@ -15,9 +15,19 @@
 	<packaging>war</packaging>
 	
 	<properties>
-		<deployment.standalone.port.offset>0</deployment.standalone.port.offset>
-		<microprofile.archive.name>${systemIdentifier}-client</microprofile.archive.name>
-		<jboss-web.context-root>${systemIdentifier}/client</jboss-web.context-root>
+		<cyk.variable.system.identifier>${systemIdentifier}</cyk.variable.system.identifier>
+		<cyk.variable.system.name>${systemIdentifier}</cyk.variable.system.name>
+		<cyk.variable.system.logging.throwable.print.stack.trace>true</cyk.variable.system.logging.throwable.print.stack.trace>
+		<!-- Theme -->
+		<cyk.variable.user.interface.theme.menu.identifier>XX.MENU.IDENTIFIER.XX</cyk.variable.user.interface.theme.menu.identifier>
+
+		<!-- Development -->
+
+		<!-- Test -->
+		
+		<!-- Production -->
+		<server.application.jboss.wildfly.prod.hostname>xx.xx.xx.xx</server.application.jboss.wildfly.prod.hostname>
+		<server.application.jboss.wildfly.prod.username>WILDFLY.PROD.USER</server.application.jboss.wildfly.prod.username>
 	</properties>
 	
 	<dependencies>
@@ -36,50 +46,47 @@
 	
 	<profiles>
 		<profile>
-			<id>common</id>
-			<properties>
-				<cyk.variable.system.name>${systemIdentifier}</cyk.variable.system.name>
-				<cyk.variable.system.logging.throwable.print.stack.trace>true</cyk.variable.system.logging.throwable.print.stack.trace>
-			</properties>
-		</profile>
-		
-		<!-- Theme -->
-		
-		<profile>
-			<id>atlantis</id>
-			<properties>
-				<cyk.variable.user.interface.theme.primefaces>atlantis-blue</cyk.variable.user.interface.theme.primefaces>
-			</properties>
-		</profile>
-		
-		<!-- Application Server -->
-		
-		<profile>
-			<id>wildfly.dev</id>
-			<properties>
-				<cyk.variable.system.proxy.uniform.resource.identifier>http://localhost:8080/${systemIdentifier}/server/api</cyk.variable.system.proxy.uniform.resource.identifier>
-			</properties>
+			<id>thorntail</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>io.thorntail</groupId>
+						<artifactId>thorntail-maven-plugin</artifactId>
+						<executions>
+							<execution>
+								<goals>
+									<goal>package</goal>
+								</goals>
+								<configuration>
+									<hollow>true</hollow>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
 		</profile>
 		
 		<profile>
-			<id>wildfly.test</id>
+			<id>docker</id>
 			<properties>
-				<cyk.variable.system.proxy.uniform.resource.identifier>http://xx.xx.xx.xx:pppp/${systemIdentifier}/server/api</cyk.variable.system.proxy.uniform.resource.identifier>
-				<wildfly.hostname>xx.xx.xx.xx</wildfly.hostname>
-				<wildfly.username>user</wildfly.username>
-				<wildfly.password>pass</wildfly.password>
+				<jboss-web.context-root></jboss-web.context-root>
 			</properties>
 		</profile>
 		
 		<profile>
-			<id>wildfly.prod</id>
+			<id>docker.dev</id>
 			<properties>
-				<cyk.variable.system.proxy.uniform.resource.identifier>http://xx.xx.xx.xx:pppp/${systemIdentifier}/server/api</cyk.variable.system.proxy.uniform.resource.identifier>
-				<wildfly.hostname>xx.xx.xx.xx</wildfly.hostname>
-				<wildfly.username>user</wildfly.username>
-				<wildfly.password>pass</wildfly.password>
+				<deployment.client.proxy.host>192.168.99.100</deployment.client.proxy.host>
+				<deployment.client.proxy.port>8081</deployment.client.proxy.port>
 			</properties>
 		</profile>
 		
+		<profile>
+			<id>docker.prod</id>
+			<properties>
+				
+			</properties>
+		</profile>
 	</profiles>	
 </project>

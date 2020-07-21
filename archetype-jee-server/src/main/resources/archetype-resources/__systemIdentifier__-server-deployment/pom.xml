@@ -15,10 +15,26 @@
 	<packaging>war</packaging>
 	
 	<properties>
-		<deployment.standalone.port.offset>0</deployment.standalone.port.offset>
-		<microprofile.archive.name>${systemIdentifier}-server</microprofile.archive.name>
-		<jboss-web.context-root>${systemIdentifier}/server</jboss-web.context-root>
+		<cyk.variable.system.identifier>${systemIdentifier}</cyk.variable.system.identifier>
+		<cyk.variable.system.name>${systemIdentifier}</cyk.variable.system.name>
+		<cyk.variable.system.version>0.1</cyk.variable.system.version>
+		
+		<cyk.variable.system.logging.throwable.print.stack.trace>true</cyk.variable.system.logging.throwable.print.stack.trace>
+		<!-- This is set here because of google replarer plugin -->
+		<jboss-web.context-root>${cyk.variable.system.identifier}/server</jboss-web.context-root>
 		<web.context>/${jboss-web.context-root}</web.context>
+		
+		<!-- Development -->
+		<data.source.oracle.dev.user>DEV.USER</data.source.oracle.dev.user>
+		<data.source.oracle.dev.password>DEV.PASSWORD</data.source.oracle.dev.password>
+		<!-- Test -->
+		
+		<!-- Production -->
+		<data.base.management.system.oracle.prod.hostname>xx.xx.xx.xx</data.base.management.system.oracle.prod.hostname>
+		<data.base.management.system.oracle.prod.sid>xx</data.base.management.system.oracle.prod.sid>
+		<data.source.oracle.prod.user>${systemIdentifier}</data.source.oracle.prod.user>
+		
+		<deployment.server.standalone.thorntail.prod.host>xx.xx.xx.xx</deployment.server.standalone.thorntail.prod.host>
 	</properties>
 	
 	<dependencies>
@@ -37,74 +53,51 @@
 	
 	<profiles>
 		<profile>
-			<id>common</id>
+			<id>thorntail</id>
 			<properties>
-				<cyk.variable.system.name>${systemIdentifier}</cyk.variable.system.name>
-				<cyk.variable.system.version>0.1</cyk.variable.system.version>
-				<cyk.variable.system.logging.throwable.print.stack.trace>true</cyk.variable.system.logging.throwable.print.stack.trace>
+				<jboss-web.context-root></jboss-web.context-root>
+				<swagger.json>/api/swagger.json</swagger.json>
+			</properties>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>io.thorntail</groupId>
+						<artifactId>thorntail-maven-plugin</artifactId>
+						<executions>
+							<execution>
+								<goals>
+									<goal>package</goal>
+								</goals>
+								<configuration>
+									<hollow>false</hollow>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		
+		<profile>
+			<id>docker</id>
+			<properties>
+				
 			</properties>
 		</profile>
 		
-		<!-- Application Server -->
-		
 		<profile>
-			<id>wildfly.dev</id>
+			<id>docker.dev</id>
 			<properties>
-				<cyk.variable.system.host>localhost</cyk.variable.system.host>
-			</properties>
-		</profile>
-		
-		<profile>
-			<id>wildfly.test</id>
-			<properties>
-				<wildfly.hostname>xx.xx.xx.xx</wildfly.hostname>
-				<wildfly.username>user</wildfly.username>
-				<wildfly.password>pass</wildfly.password>
 				<cyk.variable.system.host>xx.xx.xx.xx</cyk.variable.system.host>
+				<data.base.management.system.host>${cyk.variable.system.host}</data.base.management.system.host>
 			</properties>
 		</profile>
 		
 		<profile>
-			<id>wildfly.prod</id>
+			<id>docker.prod</id>
 			<properties>
-				<wildfly.hostname>xx.xx.xx.xx</wildfly.hostname>
-				<wildfly.username>user</wildfly.username>
-				<wildfly.password>pass</wildfly.password>
-				<cyk.variable.system.host>xx.xx.xx.xx</cyk.variable.system.host>
-			</properties>
-		</profile>
-		
-		<!-- Data Source -->
-		
-		<profile>
-			<id>oracle.dev</id>
-			<properties>
-				<data.base.management.system.host>localhost</data.base.management.system.host>
-				<data.base.management.system.sid>sid</data.base.management.system.sid>
-				<data.source.user>user</data.source.user>
-				<data.source.password>pass</data.source.password>
-			</properties>
-		</profile>
-		
-		<profile>
-			<id>oracle.test</id>
-			<properties>
-				<data.base.management.system.host>xx.xx.xx.xx</data.base.management.system.host>
-				<data.base.management.system.sid>sid</data.base.management.system.sid>
-				<data.source.user>user</data.source.user>
-				<data.source.password>pass</data.source.password>
-			</properties>
-		</profile>
-		
-		<profile>
-			<id>oracle.prod</id>
-			<properties>
-				<data.base.management.system.host>xx.xx.xx.xx</data.base.management.system.host>
-				<data.base.management.system.sid>sid</data.base.management.system.sid>
-				<data.source.user>user</data.source.user>
-				<data.source.password>pass</data.source.password>
+				<deployment.standalone.port.offset>0</deployment.standalone.port.offset>
 			</properties>
 		</profile>
 	</profiles>
-	
 </project>

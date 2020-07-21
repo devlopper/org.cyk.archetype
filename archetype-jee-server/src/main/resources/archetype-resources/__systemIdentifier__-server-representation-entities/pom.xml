@@ -17,7 +17,7 @@
 	<dependencies>
 		<dependency>
 			<groupId>${package}.${systemIdentifier}.server.business</groupId>
-			<artifactId>${systemIdentifier}-server-business-entities</artifactId>
+			<artifactId>${systemIdentifier}-server-business-api</artifactId>
 			<version>${version}</version>
 		</dependency>
 		

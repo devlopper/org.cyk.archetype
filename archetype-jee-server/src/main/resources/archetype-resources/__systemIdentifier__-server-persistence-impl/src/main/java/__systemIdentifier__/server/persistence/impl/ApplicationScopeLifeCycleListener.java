@@ -16,7 +16,8 @@ public class ApplicationScopeLifeCycleListener extends AbstractApplicationScopeL
 	public void __initialize__(Object object) {
 		PersistableClassesGetter.COLLECTION.set(List.of());
 		__inject__(org.cyk.utility.server.persistence.impl.ApplicationScopeLifeCycleListener.class).initialize(null);
-		__inject__(${package}.${systemIdentifier}.server.persistence.entities.ApplicationScopeLifeCycleListener.class).initialize(null);
+		__inject__(${package}.${systemIdentifier}.server.persistence.api.ApplicationScopeLifeCycleListener.class).initialize(null);
+		${package}.${systemIdentifier}.server.persistence.api.ApplicationScopeLifeCycleListener.initialize();
 		
 	}
 	

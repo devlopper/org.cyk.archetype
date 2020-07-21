@@ -14,4 +14,9 @@ public class ApplicationScopeLifeCycleListener extends AbstractApplicationScopeL
 	
 	/**/
 	
+	public static void initialize() {
+		org.cyk.utility.__kernel__.klass.PersistableClassesGetter.COLLECTION.set(java.util.List.of(
+				
+		));	
+	}
 }
